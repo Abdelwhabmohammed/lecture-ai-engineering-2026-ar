@@ -1,7 +1,7 @@
-"""第3回: エージェントに持たせるツール。
+"""Lecture 03: أدوات الوكيل.
 
-ここに書いた関数の docstring と型ヒントが、そのままモデルへの「ツールの説明文」になる。
-説明文を書き換えると、モデルがツールを使うかどうか・どんな引数で呼ぶかが変わる。
+تتحول سلاسل توثيق الدوال وتلميحات أنواعها هنا إلى «أوصاف الأدوات» التي تُعرض على النموذج.
+تغيير هذه الأوصاف قد يغير قرار النموذج بشأن استخدام الأداة والوسيطات التي يمررها.
 """
 
 import json
@@ -29,18 +29,18 @@ def _names(entry: dict) -> list[str]:
 
 
 def search_glossary(query: str) -> str:
-    """講座の用語集から用語を検索し、定義と、どの回で扱うかを返す。
+    """ابحث في مسرد المقرر وأعِد التعريفات والمحاضرات التي تتناول المصطلحات.
 
-    AIエンジニアリングの用語や、この講座（AIE2026）に固有の言葉について
-    答える前に使うこと。query には調べたい用語を1つだけ入れる（例: "LoRA"）。
+    استخدمها قبل الإجابة عن مصطلحات هندسة الذكاء الاصطناعي أو الكلمات الخاصة بهذا المقرر (AIE2026).
+    ضع مصطلحًا واحدًا فقط في query (مثل «LoRA»).
     """
     q = _normalize(query)
     if not q:
-        return "検索語が空です。調べたい用語を1つ指定してください。"
+        return "استعلام البحث فارغ. حدد مصطلحًا واحدًا للبحث عنه."
     glossary = load_glossary()
 
     exact = [e for e in glossary if q in _names(e)]
-    # 「r」のような短い別名が何にでも当たらないよう、名前側が短いものは除く
+    # استبعد الأسماء القصيرة حتى لا تطابق الأسماء البديلة مثل "r" كل شيء
     partial = [
         e for e in glossary
         if e not in exact and any(q in n or (len(n) >= 3 and n in q) for n in _names(e))
@@ -52,7 +52,7 @@ def search_glossary(query: str) -> str:
     hits = (exact + partial + in_definition)[:MAX_RESULTS]
 
     if not hits:
-        return f"用語集に「{query}」は見つかりませんでした。"
+        return f"لم يُعثر على المصطلح '{query}' في المسرد."
     return json.dumps(
         [
             {
@@ -68,12 +68,12 @@ def search_glossary(query: str) -> str:
 
 
 def get_lecture_summary(lecture: int) -> str:
-    """指定した回（1始まりの整数）の講義の要点を返す。
+    """أعِد النقاط الرئيسة للمحاضرة المحددة (عدد صحيح يبدأ من 1).
 
-    「第3回では何を学ぶ？」のように、回の内容や関係を聞かれたときに使う。
+    استخدمها عند السؤال عن محتوى المحاضرة أو الصلات بين المحاضرات، مثل «ماذا سنتعلم في Lecture 03؟».
     """
     path = DATA_DIR / "lectures" / f"{lecture:02d}.md"
     if not path.exists():
         available = sorted(p.stem for p in (DATA_DIR / "lectures").glob("*.md"))
-        return f"第{lecture}回の要点はまだありません。用意されている回: {', '.join(available)}"
+        return f"النقاط الرئيسة لـ Lecture {lecture:02d} غير متاحة بعد. المحاضرات المتاحة: {', '.join(available)}"
     return path.read_text(encoding="utf-8")

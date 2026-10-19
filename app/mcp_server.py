@@ -1,14 +1,15 @@
-"""第5回: 用語集と各回の要点を MCP サーバーとして公開する。
+"""Lecture 05: إتاحة المسرد والنقاط الرئيسة للمحاضرات عبر خادم MCP.
 
-使い方:
-    uv run python -m app.agent --mcp --list-tools   # このサーバーが公開するツールを一覧する（APIキー不要）
-    uv run python -m app.mcp_server --http          # Streamable HTTP で起動する（http://127.0.0.1:8000/mcp）
+Usage:
+    uv run python -m app.agent --mcp --list-tools   # اعرض الأدوات التي يتيحها هذا الخادم (دون مفتاح API)
+    uv run python -m app.mcp_server --http          # شغّله باستخدام Streamable HTTP (http://127.0.0.1:8000/mcp)
 
-引数なしで実行すると stdio（標準入出力）で待ち受ける。これは MCP クライアント（app.agent の --mcp や
-Copilot Chat）がサブプロセスとして起動する使い方なので、手で実行すると入力待ちのまま止まって見える。
+دون وسيطات، يستمع الخادم عبر stdio (الإدخال والإخراج القياسيين). هذا الوضع مخصص لعميل MCP
+(مثل app.agent مع --mcp أو Copilot Chat) كي يشغّل الخادم كعملية فرعية. إذا شغّلته يدويًا
+فسيبدو كأنه توقف بينما ينتظر الإدخال.
 
-第3回では tools.py の関数を agent.py に直接登録した。MCP サーバーにすると、同じ関数を
-Pydantic AI 以外のクライアント（Copilot Chat など）からも、共通の手順で使えるようになる。
+في Lecture 03 سجّلنا دوال tools.py مباشرة في agent.py. يتيح خادم MCP لعملاء
+غير Pydantic AI، مثل Copilot Chat، استخدام الدوال نفسها عبر بروتوكول مشترك.
 """
 
 import argparse
@@ -17,28 +18,28 @@ from mcp.server.mcpserver import MCPServer
 
 from app import tools
 
-# サーバーの名前と説明。クライアントに表示される（設定ファイル側のキー "glossary" とは別物）
+# اسم الخادم ووصفه المعروضان للعملاء (يختلف عن المفتاح "glossary" في ملف الإعداد)
 server = MCPServer(
     "aie2026-glossary",
-    instructions="AIE2026（AIエンジニアリング実践講座）の用語集と各回の要点を提供する。",
+    instructions="يتيح المسرد والنقاط الرئيسة لمحاضرات AIE2026 (AI Engineering Pilot Course).",
 )
 
-# 第3回と同じ関数を、そのまま MCP のツールとして公開する。docstring と型ヒントが説明文になる
+# أتح الدالة نفسها المستخدمة في Lecture 03 كأداة MCP؛ تتحول سلسلة توثيقها وتلميحات أنواعها إلى وصف الأداة
 server.tool()(tools.search_glossary)
 
-# TODO(第5回 演習): tools.get_lecture_summary も公開しよう（上の1行と同じ書き方）
-# 第3回で make_quiz を作った人は、それも公開できる
+# TODO(تمرين Lecture 05): أتح tools.get_lecture_summary أيضًا (بنفس صيغة السطر أعلاه)
+# إذا أنشأت make_quiz في Lecture 03 فيمكنك إتاحتها أيضًا
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="用語集 MCP サーバー")
-    parser.add_argument("--http", action="store_true", help="Streamable HTTP で起動する（既定は stdio）")
+    parser = argparse.ArgumentParser(description="خادم MCP للمسرد")
+    parser.add_argument("--http", action="store_true", help="ابدأ باستخدام Streamable HTTP (الافتراضي: stdio)")
     args = parser.parse_args()
     if args.http:
-        print("MCP サーバーを http://127.0.0.1:8000/mcp で起動します（Ctrl+C で停止）")
+        print("بدء تشغيل خادم MCP على http://127.0.0.1:8000/mcp (اضغط Ctrl+C للإيقاف)")
         server.run(transport="streamable-http")
     else:
-        # stdio では標準出力がプロトコルの通信路になるので、print してはいけない
+        # في وضع stdio، يحمل الإخراج القياسي رسائل البروتوكول؛ لا تطبع عليه
         server.run()
 
 

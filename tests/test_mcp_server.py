@@ -1,7 +1,7 @@
-"""第5回: MCP サーバーとクライアントの配線テスト（LLM も API キーも使わない）。
+"""Lecture 05: اختبارات اتصال خادم MCP وعميله (دون استخدام نموذج لغوي كبير أو مفتاح API).
 
-app/mcp_servers.json の glossary サーバーを実際に起動し（stdio）、TestModel で
-「ツールが MCP 経由で公開され、呼ばれ、結果が戻るか」を確かめる。
+شغّل خادم المسرد فعليًا من app/mcp_servers.json (عبر stdio)، واستخدم TestModel
+للتحقق من إتاحة الأدوات عبر MCP واستدعائها وإعادة نتائجها.
 """
 
 import json
@@ -11,13 +11,13 @@ from pydantic_ai.models.test import TestModel
 
 from app.agent import MCP_CONFIG, build_mcp_agent
 
-GLOSSARY_TOOL = "glossary_search_glossary"  # 設定ファイルのサーバー名 "glossary" が前に付く
+GLOSSARY_TOOL = "glossary_search_glossary"  # يبدأ باسم الخادم "glossary" الوارد في ملف الإعداد
 
 
 def _glossary_only_config(tmp_path):
-    """設定のうち glossary サーバーだけを使う（演習で足した fetch などの外部サーバーは起動しない）。"""
+    """استخدم خادم المسرد وحده من ملف الإعداد (لا تشغّل خوادم خارجية مثل fetch التي قد تُضاف في التمارين)."""
     config = json.loads(MCP_CONFIG.read_text(encoding="utf-8"))
-    assert "glossary" in config["mcpServers"], "app/mcp_servers.json に glossary サーバーが必要"
+    assert "glossary" in config["mcpServers"], "يجب أن يحتوي app/mcp_servers.json على خادم للمسرد"
     path = tmp_path / "mcp_servers.json"
     path.write_text(
         json.dumps({"mcpServers": {"glossary": config["mcpServers"]["glossary"]}}), encoding="utf-8"
@@ -31,18 +31,18 @@ def _parts(result, kind):
 
 def test_glossary_server_exposes_search_tool(tmp_path):
     model = TestModel(call_tools=[])
-    build_mcp_agent(_glossary_only_config(tmp_path)).run_sync("ツール一覧", model=model)
+    build_mcp_agent(_glossary_only_config(tmp_path)).run_sync("قائمة الأدوات", model=model)
 
     offered = {t.name for t in model.last_model_request_parameters.function_tools}
-    assert GLOSSARY_TOOL in offered  # 演習でツールを足しても壊れないよう「含む」で判定
+    assert GLOSSARY_TOOL in offered  # افحص الاحتواء حتى لا تؤدي إضافة أدوات في التمارين إلى فشل الاختبار
 
 
 def test_glossary_result_comes_back_through_mcp(tmp_path):
     model = TestModel(call_tools=[GLOSSARY_TOOL])
-    result = build_mcp_agent(_glossary_only_config(tmp_path)).run_sync("LoRAとは？", model=model)
+    result = build_mcp_agent(_glossary_only_config(tmp_path)).run_sync("ما هو LoRA؟", model=model)
 
     assert [p.tool_name for p in _parts(result, ToolCallPart)] == [GLOSSARY_TOOL]
     returns = _parts(result, ToolReturnPart)
     assert returns and returns[0].tool_name == GLOSSARY_TOOL
-    assert str(returns[0].content).strip()  # 検索結果（または「見つかりませんでした」）が戻っている
+    assert str(returns[0].content).strip()  # أُعيدت نتيجة بحث (أو رسالة تفيد بعدم العثور)
     assert result.output
