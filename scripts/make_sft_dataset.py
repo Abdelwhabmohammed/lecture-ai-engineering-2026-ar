@@ -1,6 +1,6 @@
 """واجب Lecture 02 (المستوى المتقدم): أنشئ بيانات أسئلة وأجوبة (JSONL) للضبط الدقيق الخاضع للإشراف من المسرد.
 
-Usage:
+الاستخدام:
     uv run python scripts/make_sft_dataset.py > glossary_sft.jsonl
 
 ارفع الملف الناتج إلى Colab واستخدمه بيانات تدريب لـ LoRA.
