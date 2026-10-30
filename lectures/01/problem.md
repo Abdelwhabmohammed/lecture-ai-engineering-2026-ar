@@ -91,4 +91,16 @@ git push -u origin lec01
 AIE_MODEL=gemini-3.5-flash uv run python -m app.ask "ما هو LoRA؟"
 ```
 
+### ملاحظات إضافية حول النموذج الذي تستدعيه
+
+قد تتغير مواصفات النماذج.
+حُدّثت وثائق Gemini API: أصبح Gemini 3.5 Flash متقادمًا، ويُعاد التوجيه منه إلى Gemini 3.6 Flash.
+
+- مرجع: وثائق Gemini 3.5 Flash
+https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash?hl=ar
+
+كما يوضح هذا المثال، تتغير مواصفات النماذج اللغوية الكبيرة المقدَّمة كخدمات باستمرار. اعتد مراجعة وثائق الخدمة حتى تتمكن من التكيّف مع تغيّر مواصفاتها.
+
+يمكنك استخدام أي نموذج تختاره لإنجاز واجب Lecture 01.
+
 لتغيير درجة الحرارة، ابحث عن وسيطة `config` في `generate_content`.
