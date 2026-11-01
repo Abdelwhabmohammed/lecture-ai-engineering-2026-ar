@@ -5,6 +5,7 @@
 إلى النموذج دون استخدام مفتاح API أو استهلاك حصة الاستخدام.
 """
 
+from pydantic_ai import DeferredToolRequests
 from pydantic_ai.messages import ToolCallPart, ToolReturnPart
 from pydantic_ai.models.test import TestModel
 
@@ -27,7 +28,9 @@ def test_base_tools_are_registered_and_called():
 
     called = {p.tool_name for p in _parts(result, ToolCallPart)}
     assert BASE_TOOLS <= called
-    assert len(_parts(result, ToolReturnPart)) == len(_parts(result, ToolCallPart))
+    # الأدوات التي تتطلب الموافقة (requires_approval=True) تنتظر دون تنفيذ، لذا لا تكون لها قيمة إرجاع
+    waiting = len(result.output.approvals) if isinstance(result.output, DeferredToolRequests) else 0
+    assert len(_parts(result, ToolReturnPart)) + waiting == len(_parts(result, ToolCallPart))
     assert result.output
 
 
