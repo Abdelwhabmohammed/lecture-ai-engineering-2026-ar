@@ -1,0 +1,528 @@
+{
+  "version": "2026-draft-1",
+  "note": "مسودة مسرد المصطلحات لـ AIE2026، من Lecture 01 إلى Lecture 03 وLecture 05. سيُحدَّث المحتوى بعد اعتماد شرائح المحاضرات.",
+  "terms": [
+    {
+      "id": "ai-engineering",
+      "term": "هندسة الذكاء الاصطناعي",
+      "aliases": ["AI Engineering"],
+      "lecture": 1,
+      "category": "نظرة عامة",
+      "definition": "مجال تقني يُعنى بتصميم تطبيقات وأنظمة مفيدة عمليًا وبنائها وتقييمها وتشغيلها، باستخدام النماذج الأساسية المدرَّبة مسبقًا، ولا سيما نماذج LLM، بوصفها مكوّنات. ينصبّ التركيز على اختيار النموذج وربطه بالبيانات والأدوات وتكرار دورة التقييم والتحسين، أكثر من إنشاء نموذج من الصفر.",
+      "related": ["llm", "evaluation-loop"]
+    },
+    {
+      "id": "evaluation-loop",
+      "term": "دورة التقييم والتحسين",
+      "aliases": ["دورة التحسين"],
+      "lecture": 1,
+      "category": "نظرة عامة",
+      "definition": "أسلوب تطوير يكرّر خطوات البناء ← القياس ← التحسين. لأن مخرجات تطبيقات الذكاء الاصطناعي تتفاوت احتماليًا، نقيّم جودتها ببيانات التقييم والمقاييس بدلًا من الحدس، ثم نحسّن الموجّهات والبيانات والنماذج والأدوات استنادًا إلى النتائج. في هذه الدورة، نطبّق هذه الحلقة عبر عدة محاضرات على وكيل لمساعدة التعلّم.",
+      "related": ["ai-engineering", "hallucination"]
+    },
+    {
+      "id": "llm",
+      "term": "LLM (نموذج لغوي كبير)",
+      "aliases": ["نموذج لغوي كبير", "Large Language Model"],
+      "lecture": 1,
+      "category": "أساسيات LLM",
+      "definition": "نموذج يتدرّب على كميات كبيرة من النصوص ويولّد نصًا بتوقّع الرموز النصية التالية للمدخلات. يستطيع تنفيذ مهام كثيرة، مثل الإجابة عن الأسئلة والتلخيص وتوليد الشيفرة، بمجرد تغيير التعليمات (الموجّه).",
+      "related": ["token", "prompt", "pretraining"]
+    },
+    {
+      "id": "token",
+      "term": "رمز نصي",
+      "aliases": ["token"],
+      "lecture": 1,
+      "category": "أساسيات LLM",
+      "definition": "أصغر وحدة يعالج بها LLM النص. يُقسَّم النص إلى أجزاء من كلمات أو أحرف. غالبًا ما تُحسب رسوم API وحدود المعدل وحجم نافذة السياق بعدد الرموز النصية. مثال على اختلاف تقسيم النص بين اللغات: تميل اليابانية إلى استخدام رموز نصية أكثر لكل حرف مقارنةً بالإنجليزية.",
+      "related": ["context-window", "rate-limit"]
+    },
+    {
+      "id": "context-window",
+      "term": "نافذة السياق",
+      "aliases": ["طول السياق", "context window"],
+      "lecture": 1,
+      "category": "أساسيات LLM",
+      "definition": "الحد الأقصى لإجمالي عدد الرموز النصية في مدخلات ومخرجات استدعاء واحد لنموذج LLM. يجب أن يتسع هذا الحد أيضًا لسجل المحادثة ونتائج الأدوات، لذا من المهم تحديد ما نرسله إلى النموذج.",
+      "related": ["token", "agent-loop"]
+    },
+    {
+      "id": "prompt",
+      "term": "موجّه",
+      "aliases": ["prompt"],
+      "lecture": 1,
+      "category": "أساسيات LLM",
+      "definition": "نص الإدخال الذي يُقدَّم إلى LLM. يمكن توجيه مخرجاته بإضافة الدور والقيود وصيغة الإخراج والأمثلة، إلى جانب السؤال.",
+      "related": ["system-prompt", "llm"]
+    },
+    {
+      "id": "system-prompt",
+      "term": "موجّه النظام",
+      "aliases": ["نص التعليمات", "instructions", "system instruction"],
+      "lecture": 1,
+      "category": "أساسيات LLM",
+      "definition": "إدخال يحدّد سلوك النموذج، مثل دوره ونبرته والقواعد التي عليه اتباعها، بصورة منفصلة عن سؤال المستخدم. في Pydantic AI يُمرَّر من خلال الوسيط instructions في Agent.",
+      "related": ["prompt", "guardrail"]
+    },
+    {
+      "id": "temperature",
+      "term": "temperature",
+      "aliases": ["معامل الحرارة"],
+      "lecture": 1,
+      "category": "أساسيات LLM",
+      "definition": "قيمة إعداد تضبط العشوائية عند اختيار الرمز النصي التالي. كلما انخفضت، أصبحت المخرجات أكثر ثباتًا؛ وكلما ارتفعت، ازدادت تنوعًا. وهذا أحد أسباب اختلاف الإجابات عن السؤال نفسه.",
+      "related": ["llm", "evaluation-loop"]
+    },
+    {
+      "id": "hallucination",
+      "term": "الهلوسة",
+      "aliases": ["هلوسة", "hallucination"],
+      "lecture": 1,
+      "category": "أساسيات LLM",
+      "definition": "ظاهرة يولّد فيها LLM معلومات خاطئة أو غير موجودة تبدو معقولة. تكثر عند سؤاله عما لا يعرفه، مثل أحدث المعلومات أو تفاصيل خاصة بمؤسسة أو بهذه الدورة. يمكن الحد منها بإتاحة بيانات خارجية عبر الأدوات، وطلب الأدلة، واكتشافها بالتقييم.",
+      "related": ["tool", "evaluation-loop"]
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "aliases": ["Application Programming Interface", "Web API"],
+      "lecture": 1,
+      "category": "أساسيات التطوير",
+      "definition": "واجهة تتيح للبرنامج استدعاء وظائف خدمة أخرى. في هذه الدورة نستخدم LLM باستدعاء Gemini API من Python.",
+      "related": ["api-key", "rate-limit"]
+    },
+    {
+      "id": "api-key",
+      "term": "مفتاح API",
+      "aliases": ["API key"],
+      "lecture": 1,
+      "category": "أساسيات التطوير",
+      "definition": "سلسلة سرية تُستخدم للتعرّف إلى الجهة التي تستدعي API. إذا تسرّبت، فقد يستهلك غيرك حصة استخدامك؛ لذلك لا تكتبها مباشرة في الشيفرة، ولا تضمّنها في commit، ولا تلصقها في الدردشة. في هذه الدورة نسجّلها في Codespaces secret ونقرأها من متغير البيئة GEMINI_API_KEY.",
+      "related": ["codespaces-secret", "environment-variable"]
+    },
+    {
+      "id": "environment-variable",
+      "term": "متغير البيئة",
+      "aliases": ["environment variable", "env"],
+      "lecture": 1,
+      "category": "أساسيات التطوير",
+      "definition": "قيمة تُضبط خارج البرنامج، في نظام التشغيل أو بيئة التشغيل، ويقرأها البرنامج باسمها. نستخدمها لفصل الأسرار، مثل مفاتيح API، والإعدادات التي تختلف بين البيئات عن الشيفرة.",
+      "related": ["api-key", "codespaces-secret"]
+    },
+    {
+      "id": "rate-limit",
+      "term": "حدّ المعدل",
+      "aliases": ["rate limit", "خطأ 429"],
+      "lecture": 1,
+      "category": "أساسيات التطوير",
+      "definition": "حد أقصى لعدد الطلبات أو الرموز النصية التي يمكن استخدامها خلال مدة محددة. عند تجاوزه، تُعاد أخطاء مثل HTTP 429. حدود الحصة المجانية شديدة بوجه خاص، وقد يبلغها الوكيل سريعًا لأنه يستدعي LLM عدة مرات للإجابة عن سؤال واحد.",
+      "related": ["api", "agent-loop", "default-model"]
+    },
+    {
+      "id": "codespaces",
+      "term": "GitHub Codespaces",
+      "aliases": ["Codespaces", "مساحات Codespaces"],
+      "lecture": 1,
+      "category": "بيئة التطوير",
+      "definition": "بيئة تطوير سحابية توفرها GitHub. يمكنك فتح VS Code من المتصفح واستخدام بيئة مطابقة لإعدادات المستودع فورًا. للحسابات الشخصية حصة مجانية شهرية؛ وإذا لم توقف Codespace حين لا تستخدمه، فسيستمر في استهلاك الحصة.",
+      "related": ["devcontainer", "codespaces-secret"]
+    },
+    {
+      "id": "devcontainer",
+      "term": "devcontainer",
+      "aliases": ["Dev Container", "devcontainer.json"],
+      "lecture": 1,
+      "category": "بيئة التطوير",
+      "definition": "آلية لتعريف بيئة التطوير على هيئة حاوية. عند تحديد إصدار Python والإضافات وأوامر بدء التشغيل في .devcontainer/devcontainer.json، يحصل كل من يفتح Codespaces على البيئة نفسها.",
+      "related": ["codespaces"]
+    },
+    {
+      "id": "codespaces-secret",
+      "term": "Codespaces secret",
+      "aliases": ["سرّ Codespaces"],
+      "lecture": 1,
+      "category": "بيئة التطوير",
+      "definition": "قيمة سرية تحفظها في إعدادات حساب GitHub. تُمرَّر بوصفها متغير بيئة عند تشغيل Codespaces للمستودع المحدد. عند التسجيل، يجب تحديد المستودع الذي ستستخدمه، أي نسختك المتفرعة. وإذا سجلت السرّ أثناء تشغيل Codespaces، فعليك إعادة تشغيلها.",
+      "related": ["api-key", "environment-variable", "codespaces"]
+    },
+    {
+      "id": "fork",
+      "term": "نسخة متفرعة (fork)",
+      "aliases": ["نسخة متفرعة"],
+      "lecture": 1,
+      "category": "Git/GitHub",
+      "definition": "نسخ مستودع شخص آخر كاملًا إلى حسابك. في هذه الدورة تنشئ نسخة متفرعة من مستودع الدورة، وتعمل فيها وتقدّم واجباتك من خلالها.",
+      "related": ["branch", "pull-request"]
+    },
+    {
+      "id": "branch",
+      "term": "فرع",
+      "aliases": ["branch"],
+      "lecture": 1,
+      "category": "Git/GitHub",
+      "definition": "آلية لفصل مسارات العمل. تتيح تجربة التغييرات دون إفساد main، ثم دمجها فيه عبر PR عند اكتمالها. في هذه الدورة تنشئ فرع عمل مثل lec01 لكل محاضرة.",
+      "related": ["pull-request", "fork"]
+    },
+    {
+      "id": "pull-request",
+      "term": "Pull Request (PR)",
+      "aliases": ["PR", "Pull Request"],
+      "lecture": 1,
+      "category": "Git/GitHub",
+      "definition": "آلية لطلب دمج تغييرات فرع في فرع آخر. تتيح مراجعة الفروق والتعليق عليها وعرض نتائج الاختبارات الآلية. يُقدَّم عمل هذه الدورة عبر PR من فرع العمل إلى main داخل نسختك المتفرعة.",
+      "related": ["branch", "answer-md"]
+    },
+    {
+      "id": "github-copilot",
+      "term": "GitHub Copilot",
+      "aliases": ["Copilot"],
+      "lecture": 1,
+      "category": "البرمجة بمساعدة الذكاء الاصطناعي",
+      "definition": "أداة GitHub للمساعدة في البرمجة بالذكاء الاصطناعي. تتيح إكمال الشيفرة في المحرر، وطرح الأسئلة في الدردشة، وتعديل ملفات متعددة في وضع الوكيل. لدى Copilot Free المجاني حدود لعدد مرات الإكمال وحجم استخدام الدردشة.",
+      "related": ["code-completion", "coding-agent"]
+    },
+    {
+      "id": "code-completion",
+      "term": "إكمال الشيفرة",
+      "aliases": ["الإكمال المضمّن", "inline suggestion"],
+      "lecture": 1,
+      "category": "البرمجة بمساعدة الذكاء الاصطناعي",
+      "definition": "ميزة يقترح فيها الذكاء الاصطناعي تتمة الشيفرة انطلاقًا من شيفرة أو تعليق غير مكتمل. يمكن قبول الاقتراح بمفتاح Tab مثلًا. قد يكون الاقتراح خاطئًا؛ لذا اقرأه وافهمه قبل اعتماده.",
+      "related": ["github-copilot"]
+    },
+    {
+      "id": "coding-agent",
+      "term": "وكيل برمجة",
+      "aliases": ["Coding Agent", "وكيل برمجة بالذكاء الاصطناعي"],
+      "lecture": 1,
+      "category": "البرمجة بمساعدة الذكاء الاصطناعي",
+      "definition": "نظام ذكاء اصطناعي يستخدم قراءة الملفات وكتابتها وتنفيذ الأوامر بوصفها أدوات، وينجز مهمة برمجية مطلوبة ذاتيًا عبر خطوات متعددة. من أمثلته Claude Code ووضع الوكيل في Copilot وPi. بنيته هي بنية وكيل الذكاء الاصطناعي نفسها: LLM + حلقة + أدوات.",
+      "related": ["ai-agent", "harness"]
+    },
+    {
+      "id": "pretraining",
+      "term": "التدريب المسبق",
+      "aliases": ["pre-training", "التدريب الأولي"],
+      "lecture": 2,
+      "category": "الضبط الدقيق",
+      "definition": "المرحلة الأولى التي يُدرَّب فيها النموذج على كميات كبيرة من النصوص العامة لتوقّع الرمز النصي التالي. يكتسب خلالها قدرًا كبيرًا من المعرفة اللغوية والمعرفة العامة.",
+      "related": ["fine-tuning", "llm"]
+    },
+    {
+      "id": "fine-tuning",
+      "term": "الضبط الدقيق",
+      "aliases": ["fine-tuning", "التدريب الإضافي", "FT"],
+      "lecture": 2,
+      "category": "الضبط الدقيق",
+      "definition": "تدريب إضافي لنموذج مدرَّب مسبقًا باستخدام بيانات تناسب مهمة أو صيغة معينة. يفيد في تعليمه صيغة المخرجات أو نبرتها أو السلوك الخاص بمجال محدد. أما للرجوع إلى أحدث الحقائق، فغالبًا ما يكون الوصول إلى بيانات خارجية عبر الأدوات أو RAG أنسب.",
+      "related": ["sft", "peft", "lora"]
+    },
+    {
+      "id": "sft",
+      "term": "الضبط الدقيق الخاضع للإشراف (SFT)",
+      "aliases": ["SFT", "Supervised Fine-Tuning", "ضبط التعليمات"],
+      "lecture": 2,
+      "category": "الضبط الدقيق",
+      "definition": "طريقة لتدريب النموذج تدريبًا إضافيًا باستخدام أزواج من المدخلات والمخرجات المطلوبة، مثل الأسئلة والإجابات النموذجية. وهي طريقة شائعة لتعليمه اتباع التعليمات.",
+      "related": ["fine-tuning", "lora"]
+    },
+    {
+      "id": "peft",
+      "term": "PEFT",
+      "aliases": ["Parameter-Efficient Fine-Tuning", "الضبط الدقيق الكفء في استخدام المعلمات"],
+      "lecture": 2,
+      "category": "الضبط الدقيق",
+      "definition": "اسم جامع لطرائق لا تُدرّب جميع معلمات النموذج، بل جزءًا صغيرًا منها أو معلمات صغيرة تُضاف إليه. تقلل كثيرًا ذاكرة GPU ومساحة التخزين المطلوبتين. وتُعد LoRA مثالًا بارزًا عليها.",
+      "related": ["lora", "fine-tuning"]
+    },
+    {
+      "id": "lora",
+      "term": "LoRA",
+      "aliases": ["Low-Rank Adaptation"],
+      "lecture": 2,
+      "category": "الضبط الدقيق",
+      "definition": "طريقة من PEFT تُبقي أوزان النموذج المدرَّب مسبقًا ثابتة، وتمثل التغييرات فيها بحاصل ضرب مصفوفتين صغيرتين منخفضتي الرتبة، وتدرّب هاتين المصفوفتين فقط. لذلك يقل عدد المعلمات المدرَّبة، ويمكن حفظ الناتج، أي المهايئ، في ملف صغير. تتناول تمارين Lecture 02 طريقة LoRA.",
+      "related": ["peft", "lora-rank", "qlora"]
+    },
+    {
+      "id": "lora-rank",
+      "term": "الرتبة (r في LoRA)",
+      "aliases": ["rank", "r"],
+      "lecture": 2,
+      "category": "الضبط الدقيق",
+      "definition": "معلمة فائقة تحدد حجم المصفوفات منخفضة الرتبة المستخدمة في LoRA. زيادة قيمتها ترفع القدرة التعبيرية، لكنها تزيد أيضًا عدد المعلمات المدرَّبة واستخدام الذاكرة.",
+      "related": ["lora"]
+    },
+    {
+      "id": "qlora",
+      "term": "QLoRA",
+      "aliases": ["Quantized LoRA"],
+      "lecture": 2,
+      "category": "الضبط الدقيق",
+      "definition": "طريقة توفّر الذاكرة بتكميم أوزان النموذج الأساسي، إلى 4 بتات مثلًا، ثم تدرّبه باستخدام LoRA. وبذلك يمكن استخدام نماذج أكبر على وحدات GPU أصغر. في تمارين Lecture 02 يتسع النموذج في ذاكرة GPU، لذا نتدرّب باستخدام LoRA، ونقارن في المستوى المتقدم الذاكرة والمخرجات عند تحميله بدقة 4 بتات.",
+      "related": ["lora", "quantization"]
+    },
+    {
+      "id": "quantization",
+      "term": "التكميم",
+      "aliases": ["quantization"],
+      "lecture": 2,
+      "category": "الضبط الدقيق",
+      "definition": "تقنية لتمثيل أوزان النموذج بعدد أقل من البتات، مثل الانتقال من 16 بتًا إلى 4 بتات، لتقليل استخدام الذاكرة والحسابات. قد تنخفض الدقة قليلًا.",
+      "related": ["qlora"]
+    },
+    {
+      "id": "learning-rate",
+      "term": "معدل التعلّم",
+      "aliases": ["learning rate", "lr"],
+      "lecture": 2,
+      "category": "الضبط الدقيق",
+      "definition": "معلمة فائقة تحدد مقدار تغيير المعلمات في كل تحديث. إذا كانت قيمتها كبيرة جدًا يصبح التدريب غير مستقر، وإذا كانت صغيرة جدًا يتباطأ التقدم.",
+      "related": ["epoch", "overfitting"]
+    },
+    {
+      "id": "epoch",
+      "term": "حقبة تدريبية",
+      "aliases": ["epoch"],
+      "lecture": 2,
+      "category": "الضبط الدقيق",
+      "definition": "يُعدّ المرور الواحد على مجموعة بيانات التدريب كاملةً حقبةً تدريبيةً واحدةً. وقد يؤدي الإكثار من الحقب إلى فرط التكيّف.",
+      "related": ["overfitting", "learning-rate"]
+    },
+    {
+      "id": "overfitting",
+      "term": "فرط التكيّف",
+      "aliases": ["overfitting", "الإفراط في التكيّف"],
+      "lecture": 2,
+      "category": "الضبط الدقيق",
+      "definition": "حالة يتكيّف فيها النموذج مع بيانات التدريب أكثر من اللازم، فيضعف أداؤه على مدخلات لم يرها. نكتشفها بقياس الأداء على بيانات تحقق لم تُستخدم في التدريب.",
+      "related": ["epoch", "evaluation-loop"]
+    },
+    {
+      "id": "huggingface-hub",
+      "term": "Hugging Face Hub",
+      "aliases": ["Hugging Face", "HF Hub"],
+      "lecture": 2,
+      "category": "الضبط الدقيق",
+      "definition": "منصة لمشاركة النماذج ومجموعات البيانات المنشورة وتنزيلها. تُستخدم للحصول على نماذج ذات أوزان مفتوحة أو لنشر مهايئات LoRA.",
+      "related": ["lora", "pretraining"]
+    },
+    {
+      "id": "ai-agent",
+      "term": "وكيل ذكاء اصطناعي",
+      "aliases": ["وكيل", "agent"],
+      "lecture": 3,
+      "category": "الوكلاء",
+      "definition": "نظام يحقق هدفًا من خلال حلقة يقرر فيها LLM استدعاء أداة، ويفحص النتيجة، ثم يحدد خطوته التالية. بنيته الأساسية هي «نموذج + حلقة + أدوات».",
+      "related": ["agent-loop", "tool", "harness"]
+    },
+    {
+      "id": "agent-loop",
+      "term": "حلقة الوكيل",
+      "aliases": ["agent loop", "حلقة استدعاء الأدوات"],
+      "lecture": 3,
+      "category": "الوكلاء",
+      "definition": "عملية تتكرر حتى يعطي النموذج إجابة نهائية: تمرير المدخلات إليه ← تنفيذ استدعاءات الأدوات التي يعيدها ← إعادة النتائج إليه. استدعاء LLM عدة مرات للإجابة عن سؤال واحد يؤثر بدرجة كبيرة في الوقت والتكلفة وحدود المعدل.",
+      "related": ["ai-agent", "tool", "rate-limit"]
+    },
+    {
+      "id": "tool",
+      "term": "أداة (Tool use / Function calling)",
+      "aliases": ["استدعاء أداة", "Function calling", "Tool use", "أداة"],
+      "lecture": 3,
+      "category": "الوكلاء",
+      "definition": "دالة تُتاح للنموذج كي يستدعيها. يطّلع النموذج على اسم الأداة ووصفها وأنواع وسيطاتها، ويختار الوسيطات عند الحاجة ويطلب الاستدعاء؛ ثم ينفّذ البرنامج الدالة. تُستخدم للبحث والحسابات وعمليات الملفات واستدعاء واجهات API الخارجية وغيرها.",
+      "related": ["tool-description", "agent-loop"]
+    },
+    {
+      "id": "tool-description",
+      "term": "وصف الأداة",
+      "aliases": ["docstring", "مخطط الأداة", "tool schema"],
+      "lecture": 3,
+      "category": "الوكلاء",
+      "definition": "نص يشرح للنموذج وظيفة الأداة ومعنى وسيطاتها. في Pydantic AI يُنشأ تلقائيًا من docstring الدالة وتلميحات الأنواع. يقرأه النموذج ليقرر هل يستخدم الأداة وكيف يستدعيها، لذلك قد تؤثر صياغته كثيرًا في سلوكه.",
+      "related": ["tool", "pydantic-ai"]
+    },
+    {
+      "id": "structured-output",
+      "term": "مخرجات منظَّمة",
+      "aliases": ["structured output", "مخرجات JSON"],
+      "lecture": 3,
+      "category": "الوكلاء",
+      "definition": "آلية لتلقي مخرجات النموذج وفق أنواع محددة أو مخطط JSON. وهي تسهّل معالجتها لاحقًا برمجيًا. في Pydantic AI تحدد نموذج Pydantic في output_type.",
+      "related": ["pydantic-ai"]
+    },
+    {
+      "id": "harness",
+      "term": "إطار تشغيل الوكيل",
+      "aliases": ["agent harness", "غلاف الوكيل"],
+      "lecture": 3,
+      "category": "الوكلاء",
+      "definition": "برنامج يحيط نموذج LLM بحلقة وأدوات وواجهة مستخدم (UI) وغيرها حتى يتمكن من إنجاز عمل فعلي. يُعد Claude Code وPi مثالين عليه. ويُعرف Pi بإطاره الخفيف الذي يقتصر على أربع أدوات مدمجة: read وwrite وedit وbash.",
+      "related": ["coding-agent", "pi"]
+    },
+    {
+      "id": "pi",
+      "term": "Pi",
+      "aliases": ["Pi coding agent", "pi agent"],
+      "lecture": 3,
+      "category": "الوكلاء",
+      "definition": "وكيل برمجة مفتوح المصدر بترخيص MIT يعمل في الطرفية. صُمم بحد أدنى من الميزات وموجّه النظام، ليتمكن المستخدمون من توسيعه. صدر الإصدار 1.0 في أكتوبر 2026. اسم حزمته في npm هو @earendil-works/pi-coding-agent.",
+      "related": ["harness", "coding-agent"]
+    },
+    {
+      "id": "pydantic-ai",
+      "term": "Pydantic AI",
+      "aliases": ["pydantic-ai", "PydanticAI"],
+      "lecture": 3,
+      "category": "الوكلاء",
+      "definition": "إطار عمل لبناء الوكلاء بلغة Python. يستخدم أنواع Pydantic لتعريف وسيطات الأدوات ومخرجاتها، ويتيح التعامل مع نماذج كثيرة، مثل Gemini وOpenAI، بأسلوب كتابة واحد. كما تتيح نماذج الاختبار فحص السلوك دون استدعاء API. وهو إطار العمل الأساسي في Lecture 03.",
+      "related": ["test-model", "structured-output", "adk"]
+    },
+    {
+      "id": "adk",
+      "term": "ADK (Agent Development Kit)",
+      "aliases": ["ADK", "Agent Development Kit", "google-adk"],
+      "lecture": 3,
+      "category": "الوكلاء",
+      "definition": "إطار عمل مفتوح المصدر لتطوير الوكلاء أصدرته Google. يتكامل بعمق مع Gemini، ويتيح adk web تتبع استدعاءات الأدوات بصريًا. أدخل الإصدار 2.0 تغييرات غير متوافقة مع سلسلة 1.x. تتناوله هذه الدورة في المستوى المتقدم من الواجب.",
+      "related": ["pydantic-ai", "ai-agent"]
+    },
+    {
+      "id": "mcp",
+      "term": "MCP (Model Context Protocol)",
+      "aliases": ["MCP", "Model Context Protocol"],
+      "lecture": 3,
+      "category": "الوكلاء",
+      "definition": "بروتوكول قياسي مفتوح يصل تطبيقات الذكاء الاصطناعي بالأدوات ومصادر البيانات الخارجية. يمكن للوكلاء والمحررات المتوافقة، أي عملاء MCP، استخدام الأدوات التي يعرضها خادم MCP بالطريقة نفسها. في Lecture 05 ستجرّب ذلك بتحويل البحث في المسرد إلى خادم MCP.",
+      "related": ["tool", "ai-agent", "mcp-server", "mcp-client"]
+    },
+    {
+      "id": "guardrail",
+      "term": "ضابط وقائي",
+      "aliases": ["guardrail"],
+      "lecture": 3,
+      "category": "الوكلاء",
+      "definition": "قيد أو فحص يُوضع لمنع الوكيل من سلوك أو مخرجات غير مرغوبة. تشمل الوسائل وضع قواعد في التعليمات، وتقييد صلاحيات الأدوات، وفحص المخرجات، وطلب تأكيد بشري قبل العمليات المهمة.",
+      "related": ["human-in-the-loop", "system-prompt"]
+    },
+    {
+      "id": "human-in-the-loop",
+      "term": "الإنسان في حلقة المعالجة",
+      "aliases": ["HITL", "موافقة بشرية", "خطوة تأكيد"],
+      "lecture": 3,
+      "category": "الوكلاء",
+      "definition": "إدخال تأكيد الإنسان أو موافقته ضمن معالجة الوكيل. يُستخدم قبل عمليات يصعب التراجع عنها، مثل كتابة البيانات أو إرسالها. في Pydantic AI يتحقق ذلك عبر أدوات تضبط requires_approval=True.",
+      "related": ["guardrail", "tool"]
+    },
+    {
+      "id": "test-model",
+      "term": "TestModel",
+      "aliases": ["نموذج اختبار"],
+      "lecture": 3,
+      "category": "الوكلاء",
+      "definition": "نموذج وهمي للاختبار مضمَّن في Pydantic AI. يستدعي الأدوات ويعيد إجابات تجريبية دون استدعاء LLM حقيقي. يتيح اختبار توصيلات الوكيل، أي تسجيل الأدوات واستدعاءها وإرجاع نتائجها، دون مفتاح API أو استهلاك حصة الاستخدام.",
+      "related": ["pydantic-ai", "rate-limit"]
+    },
+    {
+      "id": "homework-levels",
+      "term": "مستويات الواجب الثلاثة",
+      "aliases": ["ثلاثة مستويات", "مستويات الواجب"],
+      "lecture": 1,
+      "category": "الدورة",
+      "definition": "بنية واجبات AIE2026. تتكون من ثلاثة مستويات: «الأساسي (مراجعة محتوى المحاضرة)» و«التطبيقي (كتابة الشيفرة بنفسك)» و«المتقدم (البحث والتجريب)». يكفي إنجاز أي مستوى واحد لإكمال واجب تلك المحاضرة. وكقاعدة عامة، لا تُعطى له درجة.",
+      "related": ["answer-md"]
+    },
+    {
+      "id": "answer-md",
+      "term": "answer.md",
+      "aliases": ["ملف الإجابة"],
+      "lecture": 1,
+      "category": "الدورة",
+      "definition": "الملف الذي تسجّل فيه نتائج التمارين والواجبات لكل محاضرة من AIE2026. يوجد في lectures/NN/answer.md. اكتب المستوى الذي اخترته وما فعلته والنتائج وملاحظاتك، ثم قدّم العمل بفتح PR من فرع عملك إلى main في نسختك المتفرعة.",
+      "related": ["pull-request", "homework-levels"]
+    },
+    {
+      "id": "lec-start-tag",
+      "term": "وسم lecNN-start",
+      "aliases": ["وسم البداية", "lec03-start"],
+      "lecture": 1,
+      "category": "الدورة",
+      "definition": "وسم Git يُضاف إلى الشيفرة عند بداية تمارين كل محاضرة في مستودع دورة AIE2026، مثل lec03-start. حتى إن لم تنتهِ من المحاضرة السابقة، يمكنك إنشاء فرع من هذا الوسم والبدء في تمارين المحاضرة الحالية.",
+      "related": ["branch"]
+    },
+    {
+      "id": "default-model",
+      "term": "النموذج الافتراضي",
+      "aliases": ["النموذج المبدئي", "gemini-3.5-flash-lite"],
+      "lecture": 1,
+      "category": "الدورة",
+      "definition": "النموذج القياسي لتمارين AIE2026 وواجباتها هو gemini-3.5-flash-lite، وقد اختير مراعاةً لحدود معدل الحصة المجانية واستقرار تشغيل الدورة. يمكنك تغييره عبر متغير البيئة AIE_MODEL أو استخدام API بموجب اشتراكك الخاص.",
+      "related": ["rate-limit", "api-key"]
+    },
+    {
+      "id": "external-tool",
+      "term": "أداة خارجية",
+      "aliases": ["external tool", "خدمة خارجية"],
+      "lecture": 5,
+      "category": "MCP",
+      "definition": "استخدام قدرات تقع خارج برنامج الوكيل بوصفها أدوات، مثل جلب صفحات الويب وعمليات الملفات وقواعد البيانات وواجهات API التابعة لجهات أخرى. تعمل الأدوات الدالية في Lecture 03 داخل العملية نفسها، بينما تُستدعى الأدوات الخارجية عبر عمليات أو أجهزة مختلفة. وMCP بروتوكول مشترك لذلك.",
+      "related": ["tool", "mcp", "mcp-server"]
+    },
+    {
+      "id": "mcp-server",
+      "term": "خادم MCP",
+      "aliases": ["MCP server"],
+      "lecture": 5,
+      "category": "MCP",
+      "definition": "برنامج يعرض الأدوات، وربما الموارد أو الموجّهات، عبر MCP. يعرض أسماء الأدوات وأوصافها ومخططات وسيطاتها، وينفذها استجابةً لطلبات العميل ثم يعيد النتائج. في هذه الدورة يصبح البحث في المسرد خادم MCP ‏(app/mcp_server.py). تتوفر أيضًا خوادم جاهزة كثيرة، مثل fetch وfilesystem وGitHub.",
+      "related": ["mcp", "mcp-client", "mcp-transport", "fetch-server"]
+    },
+    {
+      "id": "mcp-client",
+      "term": "عميل MCP",
+      "aliases": ["MCP client", "مضيف MCP"],
+      "lecture": 5,
+      "category": "MCP",
+      "definition": "المكوّن الذي يتصل بخوادم MCP، ويعرض أدواتها على النموذج، ويستدعيها وفق تعليماته. يمكن أن يكون العميل برنامج وكيل، مثل MCPToolset في Pydantic AI، أو محررًا أو تطبيقًا مثل Copilot Chat وClaude Desktop وCursor. من مزايا MCP استخدام الخادم نفسه من عملاء مختلفين.",
+      "related": ["mcp", "mcp-server", "mcp-config"]
+    },
+    {
+      "id": "mcp-transport",
+      "term": "وسيلة النقل (stdio / Streamable HTTP)",
+      "aliases": ["stdio", "Streamable HTTP", "transport", "وسيلة نقل MCP"],
+      "lecture": 5,
+      "category": "MCP",
+      "definition": "قناة الاتصال بين عميل MCP وخادمه. في stdio يبدأ العميل تشغيل الخادم بوصفه عملية فرعية ويتبادلان الرسائل عبر الإدخال والإخراج القياسيين؛ وهي طريقة بسيطة تُستخدم على الجهاز نفسه. أما في Streamable HTTP فينتظر الخادم الاتصالات عند URL، ويمكن لعمليات أو أجهزة أخرى الاتصال به؛ ويجب عندها مراعاة نطاق الوصول والمصادقة.",
+      "related": ["mcp-server", "mcp-client"]
+    },
+    {
+      "id": "mcp-config",
+      "term": "إعداد mcpServers",
+      "aliases": ["mcpServers", "ملف إعداد MCP", "mcp_servers.json", "mcp.json"],
+      "lecture": 5,
+      "category": "MCP",
+      "definition": "ملف إعداد يسرد خوادم MCP المراد استخدامها. تحدد لكل خادم اسمًا وأمر تشغيل (stdio) أو URL للاتصال (HTTP). يقرأ Claude Desktop وCursor وPydantic AI صيغة mcpServers نفسها، بينما يستخدم VS Code / Copilot Chat صيغة servers. تستخدم هذه الدورة app/mcp_servers.json. وتعد إضافة أدوات ببضعة أسطر من الإعداد جوهر تجربة MCP.",
+      "related": ["mcp-client", "tool-namespace"]
+    },
+    {
+      "id": "tool-namespace",
+      "term": "حيّز أسماء الأدوات",
+      "aliases": ["بادئة اسم الأداة", "prefix", "تعارض الأسماء"],
+      "lecture": 5,
+      "category": "MCP",
+      "definition": "إضافة بادئة مثل «server_name_tool_name» للتمييز بين أدوات تحمل الاسم نفسه عند استخدام عدة خوادم MCP. يضيف app/agent.py في هذه الدورة اسم الخادم تلقائيًا من ملف الإعداد، مثل glossary_search_glossary؛ ويفعل load_mcp_toolsets في Pydantic AI الشيء نفسه. كلما زاد عدد الأدوات، زادت الأوصاف المرسلة إلى النموذج، مما يؤثر في دقة اختيار الأداة وعدد الرموز النصية.",
+      "related": ["mcp-config", "tool-description", "rate-limit"]
+    },
+    {
+      "id": "fetch-server",
+      "term": "خادم fetch",
+      "aliases": ["mcp-server-fetch", "fetch", "أداة جلب صفحات الويب"],
+      "lecture": 5,
+      "category": "MCP",
+      "definition": "خادم MCP جاهز يجلب صفحة URL محدد ويعيد متنها بصيغة Markdown. كُتب بلغة Python ويبدأ بالأمر uvx mcp-server-fetch. تستخدمه هذه الدورة مثالًا على «إضافة أداة خارجية عبر ملف الإعداد فقط». وهو يصل فعليًا إلى عناوين URL التي يختارها النموذج، لذا يجب أن يفهم المستخدم الوجهة والبيانات التي يرسلها.",
+      "related": ["mcp-server", "external-tool", "guardrail"]
+    }
+  ]
+}

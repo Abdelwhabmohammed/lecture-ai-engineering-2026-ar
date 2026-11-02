@@ -1,0 +1,79 @@
+{
+  "config": {
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "seed": 42,
+    "num_train_epochs": 5,
+    "warmup_steps": 6,
+    "lr": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "max_seq_len": 512,
+    "max_new_tokens": 96,
+    "gen": {
+      "do_sample": false
+    }
+  },
+  "versions": {
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "trl": "1.14.2",
+    "torch": "2.11.0+cu130"
+  },
+  "method": "LoRA (no quantization)",
+  "before": {
+    "label": "before",
+    "n": 21,
+    "format_rate": 1.0,
+    "content_rate": 0.14285714285714285,
+    "both_rate": 0.14285714285714285,
+    "seconds": 59.9
+  },
+  "after": {
+    "label": "after",
+    "n": 21,
+    "format_rate": 1.0,
+    "content_rate": 0.6190476190476191,
+    "both_rate": 0.6190476190476191,
+    "seconds": 47.2
+  },
+  "regressed": [],
+  "knowledge": [
+    {
+      "Question": "When is the final assignment deadline for this course?",
+      "In FAQ": false,
+      "Before-training classification": "format_error",
+      "Before-training output": "{\"answer\": \"The final assignment deadline is not explicitly mentioned in the provided FAQ text. However, the FAQ states that decisions come out in mid-April and you have until early May to enroll and pay tuition plus a small processing fee. This implies the deadline for submitting assignments would be shortly after the enrollment deadline, likely in early May or late April, but the specific date is not listed in the text.\"}",
+      "After-training classification": "asserted",
+      "After-training output": "{\"answer\": \"There is no final assignment deadline for this course. Students can miss up to 2 days and still receive a certificate.\", \"needs_review\": false}"
+    },
+    {
+      "Question": "What is the instructor's name?",
+      "In FAQ": false,
+      "Before-training classification": "needs_review",
+      "Before-training output": "{\"answer\": \"Confirmation is needed\", \"needs_review\": true}",
+      "After-training classification": "needs_review",
+      "After-training output": "{\"answer\": \"The FAQ does not state the instructor's name, so confirmation is needed.\", \"needs_review\": true}"
+    },
+    {
+      "Question": "What is the topic of the next lecture?",
+      "In FAQ": false,
+      "Before-training classification": "needs_review",
+      "Before-training output": "{\"answer\": \"The topic of the next lecture is not provided in the FAQ.\", \"needs_review\": true}",
+      "After-training classification": "needs_review",
+      "After-training output": "{\"answer\": \"The FAQ does not contain information about the next lecture's topic. Confirmation is needed.\", \"needs_review\": true}"
+    },
+    {
+      "Question": "When is the assignment deadline?",
+      "In FAQ": false,
+      "Before-training classification": "format_error",
+      "Before-training output": "{\"answer\": \"The assignment deadline is not explicitly mentioned in the provided FAQ text. However, the FAQ states that decisions come out in mid-April and you have until early May to enroll and pay tuition plus a small processing fee. This implies that the deadline for submitting assignments would be shortly after the enrollment deadline, likely in early May or late April, but the specific date is not listed in the text.\"}",
+      "After-training classification": "asserted",
+      "After-training output": "{\"answer\": \"There is no assignment deadline. Students can miss up to 2 days and still receive a certificate.\", \"needs_review\": false}"
+    }
+  ],
+  "executed_training_myself": true,
+  "run": "B_ep5",
+  "train_seconds": 52,
+  "final_loss": 1.9252384185791016
+}

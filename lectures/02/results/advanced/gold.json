@@ -1,0 +1,143 @@
+{
+  "Are letters of reference part of the application?": {
+    "needs_review": false,
+    "must_include": [
+      "No",
+      "letter of reference"
+    ]
+  },
+  "Tell me whether I need a reference letter": {
+    "needs_review": false,
+    "must_include": [
+      "No",
+      "letter of reference"
+    ]
+  },
+  "Does the application require anyone to vouch for me?": {
+    "needs_review": false,
+    "must_include": [
+      "No",
+      "letter of reference"
+    ]
+  },
+  "When do I have to pay to enroll?": {
+    "needs_review": false,
+    "must_include": [
+      "mid-April",
+      "early May"
+    ]
+  },
+  "Tell me about the application fee and decision dates": {
+    "needs_review": false,
+    "must_include": [
+      "mid-April",
+      "early May"
+    ]
+  },
+  "By when must I enroll and pay after being accepted?": {
+    "needs_review": false,
+    "must_include": [
+      "mid-April",
+      "early May"
+    ]
+  },
+  "Can I take several courses at once?": {
+    "needs_review": false,
+    "must_include": [
+      "three",
+      "one course"
+    ]
+  },
+  "Tell me how many applications I can send": {
+    "needs_review": false,
+    "must_include": [
+      "three",
+      "one course"
+    ]
+  },
+  "If I apply to several courses, how many will I be accepted to?": {
+    "needs_review": false,
+    "must_include": [
+      "three",
+      "one course"
+    ]
+  },
+  "Can I be absent during the course?": {
+    "needs_review": false,
+    "must_include": [
+      "2 days",
+      "certificate"
+    ]
+  },
+  "Tell me the absence rules": {
+    "needs_review": false,
+    "must_include": [
+      "2 days",
+      "certificate"
+    ]
+  },
+  "What happens if I have an emergency and miss class?": {
+    "needs_review": false,
+    "must_include": [
+      "2 days",
+      "certificate"
+    ]
+  },
+  "Is the processing fee refundable?": {
+    "needs_review": false,
+    "must_include": [
+      "early June",
+      "processing fee"
+    ]
+  },
+  "Tell me the refund policy": {
+    "needs_review": false,
+    "must_include": [
+      "early June",
+      "processing fee"
+    ]
+  },
+  "What happens to my payment if I withdraw after matching?": {
+    "needs_review": false,
+    "must_include": [
+      "early June",
+      "processing fee"
+    ]
+  },
+  "What payment methods are accepted?": {
+    "needs_review": true,
+    "must_include": [
+      "Confirmation"
+    ]
+  },
+  "Which languages are the courses taught in?": {
+    "needs_review": true,
+    "must_include": [
+      "Confirmation"
+    ]
+  },
+  "How many students are in each pod?": {
+    "needs_review": true,
+    "must_include": [
+      "Confirmation"
+    ]
+  },
+  "How long does each course last?": {
+    "needs_review": true,
+    "must_include": [
+      "Confirmation"
+    ]
+  },
+  "Can I apply from a mobile browser?": {
+    "needs_review": true,
+    "must_include": [
+      "Confirmation"
+    ]
+  },
+  "Is there a Lo-Fi track?": {
+    "needs_review": true,
+    "must_include": [
+      "Confirmation"
+    ]
+  }
+}
