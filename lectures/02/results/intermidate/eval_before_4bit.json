@@ -1,0 +1,201 @@
+{
+  "summary": {
+    "label": "before_4bit",
+    "n": 21,
+    "format_rate": 1.0,
+    "content_rate": 0.0,
+    "both_rate": 0.0,
+    "seconds": 34.8
+  },
+  "rows": [
+    {
+      "question": "Are letters of reference part of the application?",
+      "raw": "{\"answer\": \"No\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Tell me whether I need a reference letter",
+      "raw": "{\"answer\": \"No\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Does the application require anyone to vouch for me?",
+      "raw": "{\"answer\": \"No\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "When do I have to pay to enroll?",
+      "raw": "{\"answer\": \"mid-April\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Tell me about the application fee and decision dates",
+      "raw": "{\n\"answer\": \"There is no cost to apply. Decisions come out in mid-April, and you have until early May to enroll and pay tuition plus a small processing fee.\",\n\"needs_review\": true\n}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "By when must I enroll and pay after being accepted?",
+      "raw": "{\"answer\": \"early May\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Can I take several courses at once?",
+      "raw": "{\"answer\": \"No\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Tell me how many applications I can send",
+      "raw": "{\"answer\": \"up to three\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "If I apply to several courses, how many will I be accepted to?",
+      "raw": "{\"answer\": \"one\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Can I be absent during the course?",
+      "raw": "{\"answer\": \"Yes\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Tell me the absence rules",
+      "raw": "{\"answer\": \"Students can miss up to 2 days and still receive a certificate.\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "What happens if I have an emergency and miss class?",
+      "raw": "{\"answer\": \"Students can miss up to 2 days and still receive a certificate.\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Is the processing fee refundable?",
+      "raw": "{\"answer\": \"No\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Tell me the refund policy",
+      "raw": "{\"answer\": \"No refunds are given after pod matching, usually in early June, and the processing fee is never refundable.\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "What happens to my payment if I withdraw after matching?",
+      "raw": "{\"answer\": \"No refunds are given after pod matching\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "What payment methods are accepted?",
+      "raw": "{\"answer\": \"No payment methods are specified in the FAQ\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "Which languages are the courses taught in?",
+      "raw": "{\n\"answer\": \"The FAQ does not specify which languages are the courses taught in.\",\n\"needs_review\": true\n}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "How many students are in each pod?",
+      "raw": "{\"answer\": \"1\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "How long does each course last?",
+      "raw": "{\"answer\": \"The FAQ does not specify the duration of each course. It only mentions enrollment deadlines and processing fees.\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "Can I apply from a mobile browser?",
+      "raw": "{\"answer\": \"Yes\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "Is there a Lo-Fi track?",
+      "raw": "{\"answer\": \"No\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    }
+  ]
+}
