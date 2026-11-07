@@ -1,0 +1,12 @@
+# Lecture 04: إعداد tools/annotate.py (Streamlit) لفتحه عبر توجيه المنافذ في Codespaces
+[server]
+headless = true
+port = 8501
+enableCORS = false
+enableXsrfProtection = false
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
