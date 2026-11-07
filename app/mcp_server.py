@@ -1,4 +1,4 @@
-"""Lecture 05: إتاحة المسرد والنقاط الرئيسة للمحاضرات عبر خادم MCP.
+"""Lecture 06: إتاحة المسرد والنقاط الرئيسة للمحاضرات عبر خادم MCP.
 
 Usage:
     uv run python -m app.agent --mcp --list-tools   # اعرض الأدوات التي يتيحها هذا الخادم (دون مفتاح API)
@@ -27,7 +27,7 @@ server = MCPServer(
 # أتح الدالة نفسها المستخدمة في Lecture 03 كأداة MCP؛ تتحول سلسلة توثيقها وتلميحات أنواعها إلى وصف الأداة
 server.tool()(tools.search_glossary)
 
-# TODO(تمرين Lecture 05): أتح tools.get_lecture_summary أيضًا (بنفس صيغة السطر أعلاه)
+# TODO(تمرين Lecture 06): أتح tools.get_lecture_summary أيضًا (بنفس صيغة السطر أعلاه)
 # إذا أنشأت make_quiz في Lecture 03 فيمكنك إتاحتها أيضًا
 
 
