@@ -1,4 +1,4 @@
-# تمارين وواجبات Lecture 05: إتاحة الأدوات واستخدامها عبر خادم MCP
+# تمارين وواجبات Lecture 06: إتاحة الأدوات واستخدامها عبر خادم MCP
 
 ## أهداف هذه المحاضرة
 
@@ -8,21 +8,21 @@
 
 ## التحضير
 
-إذا أكملت أعمال المحاضرات السابقة، فأنشئ الفرع `lec05` من `main`.
+إذا أكملت أعمال المحاضرات السابقة، فأنشئ الفرع `lec06` من `main`.
 تضيف هذه المحاضرة تبعيات، لذا نفّذ `uv sync --frozen` مرة واحدة.
 
 ```bash
-git switch main && git switch -c lec05
+git switch main && git switch -c lec06
 uv sync --frozen
 ```
 
-وإلا فيمكنك إنشاء فرع من شيفرة البداية في مستودع المقرر (الوسم `lec05-start`).
+وإلا فيمكنك إنشاء فرع من شيفرة البداية في مستودع المقرر (الوسم `lec06-start`).
 
 ```bash
 git remote -v                     # إذا لم يكن upstream موجودًا، فأضفه بالسطر التالي
 git remote add upstream https://github.com/matsuolab/lecture-ai-engineering-2026.git
 git fetch upstream --tags
-git switch -c lec05 lec05-start
+git switch -c lec06 lec06-start
 uv sync --frozen
 ```
 
@@ -32,7 +32,7 @@ uv sync --frozen
 
 ```bash
 uv run python -m app.agent --list-tools          # Lecture 03: أدوات مسجلة مباشرة كدوال
-uv run python -m app.agent --mcp --list-tools    # Lecture 05: أدوات يتلقاها الوكيل من خوادم MCP
+uv run python -m app.agent --mcp --list-tools    # Lecture 06: أدوات يتلقاها الوكيل من خوادم MCP
 ```
 
 لا يستدعي أيّ من الأمرين نموذجًا لغويًا كبيرًا، لذا يعمل كلاهما دون مفتاح API.
@@ -52,7 +52,7 @@ uv run python -m app.agent --mcp --trace "ما مستويات الواجب ال�
 
 ### 3. أتح أداة أخرى
 
-عند `TODO(تمرين Lecture 05)` في `app/mcp_server.py`، أتح `get_lecture_summary` عبر MCP أيضًا (بسطر واحد على غرار سطر `search_glossary`).
+عند `TODO(تمرين Lecture 06)` في `app/mcp_server.py`، أتح `get_lecture_summary` عبر MCP أيضًا (بسطر واحد على غرار سطر `search_glossary`).
 
 ```bash
 uv run python -m app.agent --mcp --list-tools
@@ -93,7 +93,7 @@ uv run python -m app.agent --mcp --trace "لخّص مقدمة https://modelconte
 
 ### 5. سلّم العمل
 
-املأ `lectures/05/answer.md` وافتح Pull Request من `lec05` إلى `main` داخل نسختك المتفرعة.
+املأ `lectures/06/answer.md` وافتح Pull Request من `lec06` إلى `main` داخل نسختك المتفرعة.
 
 ## الواجب (أكمل أي مستوى واحد)
 
