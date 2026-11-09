@@ -5,13 +5,18 @@
 إلى النموذج دون استخدام مفتاح API أو استهلاك حصة الاستخدام.
 """
 
-from pydantic_ai import DeferredToolRequests
+from pydantic_ai import DeferredToolRequests, DeferredToolResults
 from pydantic_ai.messages import ToolCallPart, ToolReturnPart
 from pydantic_ai.models.test import TestModel
 
 from app.agent import agent
 
-BASE_TOOLS = {"search_glossary", "get_lecture_summary"}
+BASE_TOOLS = {
+    "search_glossary",
+    "get_lecture_summary",
+    "make_quiz",
+    "save_learning_log",
+}
 
 
 def _parts(result, kind):
@@ -40,3 +45,25 @@ def test_glossary_result_reaches_the_model():
         result = agent.run_sync("ما هو RAG؟")
     returns = _parts(result, ToolReturnPart)
     assert returns and returns[0].tool_name == "search_glossary"
+
+
+def test_learning_log_waits_for_approval_then_saves(tmp_path, monkeypatch):
+    from app import tools
+
+    monkeypatch.setattr(tools, "LOG_DIR", tmp_path / "learning_log")
+    model = TestModel(call_tools=["save_learning_log"])
+    with agent.override(model=model):
+        pending = agent.run_sync("احفظ ما تعلمته عن LoRA")
+
+        assert isinstance(pending.output, DeferredToolRequests)
+        call = pending.output.approvals[0]
+        completed = agent.run_sync(
+            None,
+            message_history=pending.all_messages(),
+            deferred_tool_results=DeferredToolResults(
+                approvals={call.tool_call_id: True}
+            ),
+        )
+
+    assert completed.output
+    assert list(tools.LOG_DIR.glob("*.json"))
