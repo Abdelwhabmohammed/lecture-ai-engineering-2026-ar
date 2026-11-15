@@ -32,6 +32,32 @@ uv run python -m app.ask "ما هو LoRA؟"
 
 راجع [lectures/01/problem.md](lectures/01/problem.md) لمعرفة الخطوات بالتفصيل.
 
+<a id="lecture05-retrieval"></a>
+
+## Lecture 05: البحث في مواد المحاضرات
+
+> **حالة الإصدار:** التعليمات وقالب الإجابة جاهزان. ما زلنا بانتظار إصدار مجموعة المواد العربية وفهرس البحث، وتفعيل شيفرة Lecture 05 في `main`. تُنفَّذ الأوامر أدناه بعد إصدار البيانات والشيفرة لاحقًا.
+
+تجد خطوات التمرين والواجب في [lectures/05/problem.md](lectures/05/problem.md)، وتسجّل النتائج في [lectures/05/answer.md](lectures/05/answer.md).
+
+يعتمد التمرين على قاعدة بيانات البحث `data/rag_data/index.sqlite3`، التي تضم في النسخة اليابانية المرجعية تضمينات 214 صفحة من المحاضرات الرئيسة من Lecture 01 إلى Lecture 03. قاعدة البيانات العربية ليست مرفقة بهذا الإصدار بعد. بعد إصدار البيانات والشيفرة، وضبط `GEMINI_API_KEY` وتجهيز التبعيات من جذر المستودع، يمكنك تجربة البحث وتوليد الإجابات. يُستخدم API لتضمين السؤال عند البحث ولتوليد الإجابة.
+
+```bash
+uv sync --frozen
+uv run python -m app.retrieval "الفرق بين LoRA وQLoRA"
+uv run python -m app.agent --trace "ما الفرق بين LoRA وQLoRA؟"
+uv run python -m app.agent --graph --trace "ما الفرق بين LoRA وQLoRA؟"
+```
+
+إذا غيّرت نصوص المواد أو إعدادات التضمين، فأنشئ قاعدة بيانات للتجربة. في الطرفية التي تضبط فيها `AIE_RAG_DB`، يستخدم كل من البناء والبحث ذلك المسار.
+
+```bash
+export AIE_RAG_DB="$PWD/.cache/rag/custom.sqlite3"
+uv run python -m scripts.build_rag_index
+```
+
+لإعادة إنشاء قاعدة بيانات التجربة نفسها، أضف `--rebuild` إلى أمر البناء. للعودة إلى قاعدة البيانات الافتراضية بعد إصدارها، نفّذ `unset AIE_RAG_DB`. لا يحتاج وضع Tree ‏(`--tree`) ولا تمرير النص الكامل (`--full-context`) إلى قاعدة بيانات البحث، لكن تشغيلهما ينتظر أيضًا إصدار المواد والشيفرة.
+
 ## البنية
 
 ```
@@ -56,7 +82,8 @@ lectures/NN/
   problem.md     تمارين وواجبات المحاضرة
   answer.md      ملف تملؤه وتسلّمه
 notebooks/       Lecture 02: دفتر LoRA لـ Google Colab (lora_format_tuning.ipynb)
-scripts/         برامج مساعدة
+scripts/
+  make_sft_dataset.py Lecture 02: يجهّز بيانات التدريب
 tests/           اختبارات (لا تتطلب مفتاح API)
 pyproject.toml / uv.lock  التبعيات وإصداراتها المثبّتة
 ```
