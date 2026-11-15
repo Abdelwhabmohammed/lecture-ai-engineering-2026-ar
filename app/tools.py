@@ -11,6 +11,8 @@ from functools import cache
 from pathlib import Path
 from uuid import uuid4
 
+from app.config import api_error_message
+
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 LOG_DIR = Path(__file__).resolve().parent.parent / "learning_log"
 MAX_RESULTS = 3
@@ -83,6 +85,7 @@ def get_lecture_summary(lecture: int) -> str:
     return path.read_text(encoding="utf-8")
 
 
+<<<<<<< HEAD
 def make_quiz(lecture: int) -> str:
     """أنشئ سؤال مراجعة من مصطلح في محاضرة محددة، مع إجابته كي يطرح الوكيل السؤال على المتعلم.
 
@@ -114,3 +117,50 @@ def save_learning_log(topic: str, learning: str) -> str:
     }
     path.write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return f"حُفظ سجل التعلم في {path.relative_to(LOG_DIR.parent)}."
+=======
+def search_materials(query: str) -> str:
+    """ابحث في مواد المحاضرات الرئيسة من Lecture 01 إلى Lecture 03، وأعِد نصوص الصفحات ذات الصلة وعناوينها وأرقام صفحاتها.
+
+    حدّد المحتوى الذي تريد البحث عنه في query.
+    """
+    from google.genai.errors import APIError
+    import sqlite3
+    from app.retrieval import search
+
+    try:
+        return json.dumps({"results": search(query)}, ensure_ascii=False)
+    except (ValueError, FileNotFoundError, sqlite3.Error) as e:
+        return json.dumps({"error": str(e), "results": []}, ensure_ascii=False)
+    except APIError as e:
+        return json.dumps({"error": api_error_message(e.code), "results": []}, ensure_ascii=False)
+
+
+def browse_tree(node_id: str | None = None) -> str:
+    """أعِد فهرس المحتويات والجملة الأولى من كل صفحة. عند تحديد معرّف صفحة، أعِد نصها الكامل.
+
+    اترك node_id دون تحديد في البداية، ثم تتبّع الفهرس باستخدام المعرّفات المُعادة.
+    """
+    from app.retrieval import browse_tree as browse
+
+    try:
+        return json.dumps(browse(node_id), ensure_ascii=False)
+    except (ValueError, OSError) as e:
+        return json.dumps({"error": str(e)}, ensure_ascii=False)
+
+
+def search_graph(query: str) -> str:
+    """ابحث في المواد، وتتبّع الصفحات السابقة واللاحقة والمصطلحات المشتركة لإعادة نصوص الصفحات ذات الصلة ومعلومات الاستشهاد بها.
+
+    حدّد المحتوى الذي تريد البحث عنه في query.
+    """
+    import sqlite3
+    from google.genai.errors import APIError
+    from app.retrieval import search_graph as search
+
+    try:
+        return json.dumps(search(query), ensure_ascii=False)
+    except (ValueError, OSError, sqlite3.Error) as e:
+        return json.dumps({"error": str(e)}, ensure_ascii=False)
+    except APIError as e:
+        return json.dumps({"error": api_error_message(e.code)}, ensure_ascii=False)
+>>>>>>> 2117dbb (Translate Lecture 05 RAG exercises and runtime (ar; data pending))

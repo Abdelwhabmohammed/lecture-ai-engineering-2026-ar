@@ -5,25 +5,36 @@
 إلى النموذج دون استخدام مفتاح API أو استهلاك حصة الاستخدام.
 """
 
+<<<<<<< HEAD
 from pydantic_ai import DeferredToolRequests, DeferredToolResults
+=======
+import json
+
+from pydantic_ai import DeferredToolRequests
+>>>>>>> 2117dbb (Translate Lecture 05 RAG exercises and runtime (ar; data pending))
 from pydantic_ai.messages import ToolCallPart, ToolReturnPart
 from pydantic_ai.models.test import TestModel
 
 from app.agent import agent
 
+<<<<<<< HEAD
 BASE_TOOLS = {
     "search_glossary",
     "get_lecture_summary",
     "make_quiz",
     "save_learning_log",
 }
+=======
+BASE_TOOLS = {"search_materials"}
+>>>>>>> 2117dbb (Translate Lecture 05 RAG exercises and runtime (ar; data pending))
 
 
 def _parts(result, kind):
     return [p for m in result.all_messages() for p in m.parts if isinstance(p, kind)]
 
 
-def test_base_tools_are_registered_and_called():
+def test_base_tools_are_registered_and_called(monkeypatch):
+    monkeypatch.setattr("app.retrieval.search", lambda *args, **kwargs: [])
     model = TestModel()
     with agent.override(model=model):
         result = agent.run_sync("ما هو LoRA؟")
@@ -39,11 +50,14 @@ def test_base_tools_are_registered_and_called():
     assert result.output
 
 
-def test_glossary_result_reaches_the_model():
-    model = TestModel(call_tools=["search_glossary"])
+def test_material_result_reaches_the_model(monkeypatch):
+    hit = {"page_id": "lec02-main-p052", "lecture": 2, "page": 52, "content": "تبقى الأوزان الأصلية ثابتة"}
+    monkeypatch.setattr("app.retrieval.search", lambda *args, **kwargs: [hit])
+    model = TestModel(call_tools=["search_materials"])
     with agent.override(model=model):
         result = agent.run_sync("ما هو RAG؟")
     returns = _parts(result, ToolReturnPart)
+<<<<<<< HEAD
     assert returns and returns[0].tool_name == "search_glossary"
 
 
@@ -67,3 +81,7 @@ def test_learning_log_waits_for_approval_then_saves(tmp_path, monkeypatch):
 
     assert completed.output
     assert list(tools.LOG_DIR.glob("*.json"))
+=======
+    assert returns and returns[0].tool_name == "search_materials"
+    assert json.loads(returns[0].content)["results"] == [hit]
+>>>>>>> 2117dbb (Translate Lecture 05 RAG exercises and runtime (ar; data pending))

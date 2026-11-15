@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# لا تضف المعلومات السرية إلى الالتزامات (مرّر مفاتيح API عبر أسرار Codespaces)
+.env
+.env.*
+
+# لا تشارك سجل التعلم الشخصي (الذي تنشئه في واجب Lecture 03)
+learning_log/
+
+# macOS
+.DS_Store
+
+# Lecture 05: قاعدة بيانات البحث التي يُعاد إنشاؤها من المواد
+.cache/rag/
