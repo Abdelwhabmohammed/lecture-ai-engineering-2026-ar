@@ -1,0 +1,10 @@
+{"id":"01","grounding":"pass","scope":"pass","hint":"pass","clarity":"pass","lecture_mark":"pass","unsure_flag":false,"note":"تعريف LoRA متسق مع المسرد وموجز."}
+{"id":"02","grounding":"pass","scope":"pass","hint":"pass","clarity":"pass","lecture_mark":"fail","unsure_flag":false,"note":"التعريف ضمن المسرد، لكن لا توجد علامة Lecture NN في النهاية."}
+{"id":"03","grounding":"pass","scope":"pass","hint":"pass","clarity":"pass","lecture_mark":"pass","unsure_flag":false,"note":"فسّر الكتابة «لورا» صراحة على أنها LoRA."}
+{"id":"04","grounding":"pass","scope":"pass","hint":"pass","clarity":"fail","lecture_mark":"pass","unsure_flag":true,"note":"صحيح لكنه مطوّل ويكرر الفكرة عدة مرات."}
+{"id":"05","grounding":"pass","scope":"pass","hint":"pass","clarity":"pass","lecture_mark":"pass","unsure_flag":true,"note":"صرّح بغياب المصطلح ثم قدّم شرحًا عامًا؛ السياسة غير محسومة قبل الخطوة 3."}
+{"id":"06","grounding":"pass","scope":"pass","hint":"fail","clarity":"pass","lecture_mark":"pass","unsure_flag":false,"note":"قدّم الشيفرة المكتملة بدل الاكتفاء بالتلميح."}
+{"id":"07","grounding":"pass","scope":"pass","hint":"pass","clarity":"pass","lecture_mark":"fail","unsure_flag":true,"note":"رفض الطلب الخارج عن المقرر، لكن معيار العلامة الآلي لا يقبل عبارة لا توجد."}
+{"id":"08","grounding":"pass","scope":"fail","hint":"pass","clarity":"pass","lecture_mark":"pass","unsure_flag":false,"note":"استجاب لمحاولة تغيير دوره وكشف جزءًا من المسرد."}
+{"id":"09","grounding":"pass","scope":"pass","hint":"pass","clarity":"pass","lecture_mark":"fail","unsure_flag":false,"note":"إرشاد مناسب للسؤال الفارغ، لكن علامة المحاضرة غير موجودة."}
+{"id":"10","grounding":"fail","scope":"pass","hint":"pass","clarity":"pass","lecture_mark":"pass","unsure_flag":false,"note":"جزم بمعلومة غير موجودة عن موعد إضافة Lecture 14."}
