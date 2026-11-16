@@ -16,7 +16,7 @@ import inspect
 import json
 from pathlib import Path
 
-from pydantic_ai import Agent
+from pydantic_ai import Agent, DeferredToolRequests, DeferredToolResults
 from pydantic_ai.exceptions import ModelHTTPError
 from fastmcp import Client
 from pydantic_ai.mcp import MCPToolset, StdioTransport
@@ -32,17 +32,18 @@ INSTRUCTIONS = """\
 أنت وكيل لدعم التعلم في AI Engineering Pilot Course (AIE2026).
 - افحص المسرد دائمًا باستخدام search_glossary قبل الإجابة عن المصطلحات أو المعلومات الخاصة بالمقرر.
 - استخدم get_lecture_summary عند السؤال عن محتوى محاضرة.
+- استخدم make_quiz عندما يطلب المتعلم سؤال مراجعة من محاضرة محددة.
 - إذا لم ترد المعلومة في المسرد، فقل «ليست في المسرد» بدلًا من إطلاق أحكام مبنية على التخمين.
 - اختم إجابتك بذكر المحاضرة المعنية (Lecture NN).
 - أرشد المتعلمين إلى طريقة التفكير بتلميحات، ولا تكتب إجابات الواجبات بدلًا منهم.
 """
 
 # مرّر النموذج وقت التشغيل (حتى تتمكن الاختبارات من استخدام TestModel دون استدعاء API)
-agent = Agent(instructions=INSTRUCTIONS)
+agent = Agent(instructions=INSTRUCTIONS, output_type=[str, DeferredToolRequests])
 agent.tool_plain(tools.search_glossary)
 agent.tool_plain(tools.get_lecture_summary)
-
-# TODO(تمرين Lecture 03): أنشئ make_quiz في tools.py وسجّلها هنا
+agent.tool_plain(tools.make_quiz)
+agent.tool_plain(tools.save_learning_log, requires_approval=True)
 
 # Lecture 05: ملف إعداد خوادم MCP. يستخدم صيغة "mcpServers" نفسها المستخدمة في Claude Desktop وCursor
 MCP_CONFIG = Path(__file__).resolve().parent / "mcp_servers.json"
@@ -74,7 +75,14 @@ def load_mcp_servers(config_path: Path = MCP_CONFIG) -> list[MCPToolset]:
 
 def build_mcp_agent(config_path: Path = MCP_CONFIG) -> Agent:
     """Lecture 05: وكيل يستخدم الأدوات التي تتيحها خوادم MCP بدلًا من الدوال المسجلة مباشرة. تبقى INSTRUCTIONS كما هي."""
-    return Agent(instructions=INSTRUCTIONS, toolsets=load_mcp_servers(config_path))
+    target = Agent(
+        instructions=INSTRUCTIONS,
+        output_type=[str, DeferredToolRequests],
+        toolsets=load_mcp_servers(config_path),
+    )
+    target.tool_plain(tools.make_quiz)
+    target.tool_plain(tools.save_learning_log, requires_approval=True)
+    return target
 
 
 def build_model() -> GoogleModel:
@@ -130,6 +138,18 @@ def main() -> None:
         print("[الأدوات] خوادم MCP (app/mcp_servers.json)")
     try:
         result = target.run_sync(args.question, model=build_model())
+        while isinstance(result.output, DeferredToolRequests):
+            decisions = {}
+            for call in result.output.approvals:
+                print(f"\nطلب الوكيل موافقتك على {call.tool_name}: {call.args}")
+                approved = input("هل تسمح بالحفظ؟ [y/N] ").strip().casefold() == "y"
+                decisions[call.tool_call_id] = approved
+            result = target.run_sync(
+                None,
+                model=build_model(),
+                message_history=result.all_messages(),
+                deferred_tool_results=DeferredToolResults(approvals=decisions),
+            )
     except ModelHTTPError as e:
         print(api_error_message(e.status_code, str(e.body)[:200]))
         raise SystemExit(1)
