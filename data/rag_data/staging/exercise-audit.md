@@ -51,3 +51,14 @@ All 49 pages were reviewed against the Japanese content during translation, incl
 A separate source Latin-token audit checked 323 page/token occurrences for lecture 3 and 199 for lecture 4. No technical omissions were found. Exceptions were reviewed and limited to translated prose words (`AI`, `fork`, `repo`, `secret`, `Web`), removed repetitive attribution tokens, and the explicitly authorized Arabic operational repository URL.
 
 This is an editorial/source-fidelity check, not a claim of native-speaker review, measured retrieval accuracy, token-budget compatibility or embedding quality. Character lengths do not prove compliance with a model token limit. Full input coverage, actual token counting, embeddings and retrieval evaluation remain later stages. No API, DB build, course repository edit, commit, push or publication was performed.
+
+## Independent second-agent review
+
+The French corpus agent independently read all 49 Arabic exercise pages against Japanese and reported PASS with no material issue remaining. It verified final IDs, provenance hashes, technical/numeric/reference preservation and the expanded page-16 fail policy. Its offline check used the actual Arabic `_rule_based_judge` logic and real case 05: the original policy yields unsure, the copied pass rule yields pass, the copied fail rule yields fail, and a broken-line negative control yields unsure. No external API was used.
+
+Reports: `../fr/independent-review-ar-exercises.md` and `../fr/independent-review-ar-exercises-validation.json`. Final reviewed corpus hashes:
+
+```
+lec03-exercise.json 281f01111d02db60ff48b5ac974a078ad4f906e7f1244a3f0031d9ec596b628c
+lec04-exercise.json e93b201a7e361eff6405f381edd07dd7e3f14695ec9cafd38cbc89dfa42ad979
+```
