@@ -36,11 +36,11 @@ uv run python -m app.ask "ما هو LoRA؟"
 
 ## Lecture 05: البحث في مواد المحاضرات
 
-> **حالة الإصدار:** التعليمات وقالب الإجابة جاهزان. ما زلنا بانتظار إصدار مجموعة المواد العربية وفهرس البحث، وتفعيل شيفرة Lecture 05 في `main`. تُنفَّذ الأوامر أدناه بعد إصدار البيانات والشيفرة لاحقًا.
+تتضمن هذه النسخة التجريبية قاعدة بحث تضم 214 صفحة من محاضرات Lecture 01–03 الرئيسية. تستخدم متجهات المصدر الياباني وترجع النص المترجم. يشمل تمرير النص الكامل حاليًا 6 مستندات و342 صفحة. تبقى إضافة التوجيه الافتتاحي وتمارين Lecture 01 وLecture 02.
 
 تجد خطوات التمرين والواجب في [lectures/05/problem.md](lectures/05/problem.md)، وتسجّل النتائج في [lectures/05/answer.md](lectures/05/answer.md).
 
-يعتمد التمرين على قاعدة بيانات البحث `data/rag_data/index.sqlite3`، التي تضم في النسخة اليابانية المرجعية تضمينات 214 صفحة من المحاضرات الرئيسة من Lecture 01 إلى Lecture 03. قاعدة البيانات العربية ليست مرفقة بهذا الإصدار بعد. بعد إصدار البيانات والشيفرة، وضبط `GEMINI_API_KEY` وتجهيز التبعيات من جذر المستودع، يمكنك تجربة البحث وتوليد الإجابات. يُستخدم API لتضمين السؤال عند البحث ولتوليد الإجابة.
+يتضمن المستودع قاعدة بيانات البحث `data/rag_data/index.sqlite3`، التي تحتوي على تضمينات 214 صفحة من المحاضرات الرئيسة من Lecture 01 إلى Lecture 03. بعد ضبط `GEMINI_API_KEY` وتجهيز التبعيات من جذر المستودع، يمكنك تجربة البحث وتوليد الإجابات. يُستخدم API لتضمين السؤال عند البحث ولتوليد الإجابة.
 
 ```bash
 uv sync --frozen
@@ -56,7 +56,7 @@ export AIE_RAG_DB="$PWD/.cache/rag/custom.sqlite3"
 uv run python -m scripts.build_rag_index
 ```
 
-لإعادة إنشاء قاعدة بيانات التجربة نفسها، أضف `--rebuild` إلى أمر البناء. للعودة إلى قاعدة البيانات الافتراضية بعد إصدارها، نفّذ `unset AIE_RAG_DB`. لا يحتاج وضع Tree ‏(`--tree`) ولا تمرير النص الكامل (`--full-context`) إلى قاعدة بيانات البحث، لكن تشغيلهما ينتظر أيضًا إصدار المواد والشيفرة.
+لإعادة إنشاء قاعدة بيانات التجربة نفسها، أضف `--rebuild` إلى أمر البناء. للعودة إلى قاعدة البيانات المرفقة، نفّذ `unset AIE_RAG_DB`. لا يحتاج وضع Tree ‏(`--tree`) ولا تمرير النص الكامل (`--full-context`) إلى قاعدة بيانات البحث.
 
 ## البنية
 
@@ -69,12 +69,14 @@ app/
   tools.py       Lecture 03: أدوات الوكيل (مثل البحث في المسرد)
   agent.py       Lecture 03: وكيل لدعم التعلم باستخدام Pydantic AI (Lecture 06: عبر MCP مع --mcp)
   judge.py       Lecture 04: يقيّم المجموعة بنموذج لغوي كبير ويحسب اتفاقه مع التصنيفات البشرية
+  retrieval.py   Lecture 05: البحث في مواد المحاضرات واستكشاف Tree وGraph وتمرير النص الكامل
   mcp_server.py  Lecture 06: خادم MCP يتيح المسرد
   mcp_servers.json Lecture 06: إعداد خوادم MCP المستخدمة (بصيغة mcpServers)
 data/
   glossary.json  مسرد المقرر
   lectures/      النقاط الرئيسة لكل محاضرة
   eval/          Lecture 04: مجموعة التقييم (lec04_cases.jsonl) ومعاييره (rubric.md)
+  rag_data/      Lecture 05: نصوص المواد (lectures.json)، وفهرس المحتويات (tree.json)، والعلاقات بين الصفحات والمصطلحات (graph.json)، وقاعدة بيانات البحث (index.sqlite3)
 tools/
   annotate.py    Lecture 04: واجهة تصنيف المجموعة (Streamlit؛ يُضاف مؤقتًا عبر uv run --with)
 .streamlit/      إعداد Streamlit لفتحه عبر توجيه المنافذ في Codespaces
@@ -83,6 +85,7 @@ lectures/NN/
   answer.md      ملف تملؤه وتسلّمه
 notebooks/       Lecture 02: دفتر LoRA لـ Google Colab (lora_format_tuning.ipynb)
 scripts/
+  build_rag_index.py Lecture 05: ينشئ تضمينات المواد وقاعدة بيانات البحث
   make_sft_dataset.py Lecture 02: يجهّز بيانات التدريب
 tests/           اختبارات (لا تتطلب مفتاح API)
 pyproject.toml / uv.lock  التبعيات وإصداراتها المثبّتة
