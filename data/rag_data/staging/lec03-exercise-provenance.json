@@ -1,0 +1,462 @@
+{
+  "language": "ar",
+  "document_id": "lec03-exercise",
+  "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+  "canonical_source_json": "source-documents.json",
+  "canonical_source_json_sha256": "f6022c177ec1b5575b56d21307a5ae2aa09c586047398a17e1e4b86a56e99dce",
+  "canonical_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+  "canonical_japanese_file_sha256": "9e87178e5bc36339e3d397aae22931bb7e76576e75c6e638444d3f670b6f32fe",
+  "canonical_pages": 26,
+  "translation_origin": "Newly translated from the canonical Japanese corpus; no Arabic exercise slides were supplied.",
+  "citation_policy": "Corpus page is the canonical Japanese page. Each Japanese PPTX slide was verified to match that canonical page after disregarding whitespace, bullet markers and repetitive copyright, with explicit image supplements translated separately. No physical Arabic slide/PDF page exists or is claimed.",
+  "normalization": "Logical Unicode Arabic; all instructional text retained; repeated copyright footer removed; logo and cover disclosure text retained; layout-only line wraps repaired, including source-wrapped shell commands and a repository slug.",
+  "terminology_reference": "Existing Arabic course app/agent.py, app/tools.py, data/eval/rubric.md, tools/annotate.py and lectures/03/problem.md; used for equivalent terminology, actual UI button wording, the basic/applied/advanced level labels and the Lecture NN output marker, not as authority to alter Japanese lesson content.",
+  "pages": {
+    "lec03-exercise-p001": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 1,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 1,
+      "canonical_japanese_slide_xml": "ppt/slides/slide1.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "caa7efa1988d0a7b028721db0b6db79ed19690d8740c7d22e1a385ae549b2169",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated.",
+        "Translated all explicit image/logo/UI transcription included in the canonical source page."
+      ],
+      "reviewed_content_sha256": "220e5ab81c4a0304d6447f4bbc178db4ff15d77939f14f14f1beabf45964b677"
+    },
+    "lec03-exercise-p002": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 2,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 2,
+      "canonical_japanese_slide_xml": "ppt/slides/slide2.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "1bbf57c7c7f6e2831051358bf4f328bc3617bc213a10022944618e8ed28d2564",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "7c476aecdbdb30090c8ee6323a484f8ca176a34ea39eff7162bf9003c2ee4477"
+    },
+    "lec03-exercise-p003": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 3,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 3,
+      "canonical_japanese_slide_xml": "ppt/slides/slide3.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "bc2440f28ca7485a43e6c744f5136d7a8cbf4dc8d27ad5b719020850395b9ce7",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "da7567561dcd0410a555b2d75e22a3c65118901c286cd76a74647103d9a0abce"
+    },
+    "lec03-exercise-p004": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 4,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 4,
+      "canonical_japanese_slide_xml": "ppt/slides/slide4.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "f168179f64049d3f0cdba0bbf2c925c694dc8d9fb71ae4f8fab3fe5716c633b8",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "21e8aebe588749e315da43f7a3757a62223a503475d9262e2ef22b2a03418f9c"
+    },
+    "lec03-exercise-p005": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 5,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 5,
+      "canonical_japanese_slide_xml": "ppt/slides/slide5.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "76e1f51caba28aed4061f137f62d6ba2e9bc2cca5d94c249698a68a4f9c82370",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "e5e9cdc24a0736950aecaeb638977ba46d72b56b8dfb31239e9ff8e930c8e70d"
+    },
+    "lec03-exercise-p006": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 6,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 6,
+      "canonical_japanese_slide_xml": "ppt/slides/slide6.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "3d1da4dd87c342b1c727f1a3a98d58d93dd7cb4f948d0f5da71034a58b83bdab",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "4318a1cc626e7136ed457759852d12ec65647dc14cbeff4a41fa8d3f50e73df1"
+    },
+    "lec03-exercise-p007": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 7,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 7,
+      "canonical_japanese_slide_xml": "ppt/slides/slide7.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "dbf49fa1dc929eb5c48d4f90b140c7b4e974283632f024c3db86bb74024c39d8",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "94ebafce3470c4d5c1493db64ff144a6bf1bd5d0c980f2fbc0202f57f63a0e92"
+    },
+    "lec03-exercise-p008": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 8,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 8,
+      "canonical_japanese_slide_xml": "ppt/slides/slide8.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "dd7e360d349b2132da1e4bb39c995574282ee2f24a59013058641de31b2f73de",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "c126dda5c2ebee19e3bf1cb99dd02cfca65bcdb227b0408ab5b7f3bfd49c270d"
+    },
+    "lec03-exercise-p009": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 9,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 9,
+      "canonical_japanese_slide_xml": "ppt/slides/slide9.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "48c70448986fb496f21ea9ae9bea5df7040e0f66c64166ee41bfff35a88c28e1",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "ee1532870b2b863db016789f9027514dfd34b79ce1417bae439ced291d34248d"
+    },
+    "lec03-exercise-p010": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 10,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 10,
+      "canonical_japanese_slide_xml": "ppt/slides/slide10.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "5462d16868a30512f91978bf922388a1cdb579677965d801b079b51f5afee8a2",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "37ea9a5b677f5aef71e33d389912808d13fdac7e4a79652fa4902acd2b20d5f0"
+    },
+    "lec03-exercise-p011": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 11,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 11,
+      "canonical_japanese_slide_xml": "ppt/slides/slide11.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "f9f7ee4a31b7a91fc06d42c6b2355bfbf115e048b509250f87fd1e6be4507ed0",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "3f63b7e76e81e9a532d44d9770dbc85fd179a00ad41e2d138d1aef4c5e85d3f0"
+    },
+    "lec03-exercise-p012": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 12,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 12,
+      "canonical_japanese_slide_xml": "ppt/slides/slide12.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "9cbf94a85fec5b05e1c4b7df4ed573057944cf242ab327278b8cf6b8c8e5cac0",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "c905e7d9640cfc90b1963368b1dace9894fb1f0ecc49cbe51aa71535a97bcdcb"
+    },
+    "lec03-exercise-p013": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 13,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 13,
+      "canonical_japanese_slide_xml": "ppt/slides/slide13.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "d2d08845eb56f40e94e93e7d0f39a123892aaab6152382b5c1e3fb77fccdda53",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated.",
+        "Operational git fetch URL adapted from the Japanese course repository to https://github.com/matsuolab/lecture-ai-engineering-2026-ar.git, as authorized for the existing Arabic course workflow. Tag and command flags unchanged."
+      ],
+      "reviewed_content_sha256": "174e395ab106354d3593b5a8e27da0b79d079303b1ecaa385856a2dff234547e"
+    },
+    "lec03-exercise-p014": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 14,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 14,
+      "canonical_japanese_slide_xml": "ppt/slides/slide14.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "ce5b4b39f8669b5d8993b544880dce55169020d4ceb6da4c810b33f5c9e7de69",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "f0e620c0003a999afc747090080f129463d2b97e07af643af942d7b532d6c880"
+    },
+    "lec03-exercise-p015": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 15,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 15,
+      "canonical_japanese_slide_xml": "ppt/slides/slide15.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "795aefca951bb8b6696aaac9744bed4e8842ac7af2368cc9e7f0ca4ceeafeb01",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "7da0db7daa75b51d14e0394df14fb61d772e6ff222d8408eee9d84d59184ddb6"
+    },
+    "lec03-exercise-p016": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 16,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 16,
+      "canonical_japanese_slide_xml": "ppt/slides/slide16.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "41fb5435961996a24bed08a4326252f503e0cafa212163c5f6e15f7e0f0dccfe",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated.",
+        "Japanese 第N回 output-marker examples adapted to the existing Arabic repository's literal Lecture NN marker, preserving the code-checkable lecture-reference requirement.",
+        "INSTRUCTIONS and docstring terminology follows the existing Arabic code where equivalent. The source shows excerpts without closing triple quotes; retained as excerpts, not presented as a complete runnable replacement."
+      ],
+      "reviewed_content_sha256": "bf59627ecd6a2b1d27b892a523ec4383de68024b0a9744ee2c10ed203830a196"
+    },
+    "lec03-exercise-p017": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 17,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 17,
+      "canonical_japanese_slide_xml": "ppt/slides/slide17.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "5023836aaf0a328733fd540f23f2807d50e324b1b5965fa58c118aa14b3e9281",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "20ba0aba57789f13b9fb5521c19b73de659683e3daeac08e9e17daa2b31a4e75"
+    },
+    "lec03-exercise-p018": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 18,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 18,
+      "canonical_japanese_slide_xml": "ppt/slides/slide18.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "19c4841d1687baa8284ed5cdb732248c2736de5cef8ee51907ed726b734a7d64",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "78aed64b95de023e4aeeb72b6c9953d8b06191fc30ecf622f52032c541bcec60"
+    },
+    "lec03-exercise-p019": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 19,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 19,
+      "canonical_japanese_slide_xml": "ppt/slides/slide19.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "2143b23983a8d95b2af2974532c0314c28b214f0e6021492252e23f116f968e0",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "d4b94508fa97339bd27c67b6ff7f78d112d55aeb21959af4753f417456496fe6"
+    },
+    "lec03-exercise-p020": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 20,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 20,
+      "canonical_japanese_slide_xml": "ppt/slides/slide20.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "63ec1fd1f3cb911f033ca2990bb9d8aa7e89da3a8bfd31d26e9da44adde0285f",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "3c1708c14bdc9624807900f5f680075472374a09149cece8f42e6c820d0d4a98"
+    },
+    "lec03-exercise-p021": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 21,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 21,
+      "canonical_japanese_slide_xml": "ppt/slides/slide21.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "68e3056afa9af64e3a2ca09c6712bb26402ff133ccfddb03b266a88d3bc8092b",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "4cd135c096cb9555763843d9144667b82634851aa5614338d037504997db2ba6"
+    },
+    "lec03-exercise-p022": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 22,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 22,
+      "canonical_japanese_slide_xml": "ppt/slides/slide22.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "5db37c7e12c940afa5af71005539f96595bee4c98c4164bcfdc8923a83558106",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "aabbe762875493d9505348ee6497751abac35f8bbb06b892cfddb6d7c17a5314"
+    },
+    "lec03-exercise-p023": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 23,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 23,
+      "canonical_japanese_slide_xml": "ppt/slides/slide23.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "386ac08f0691d256847c0f63526dddaa2594e6ddb09fbe7206c016ddd837bead",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "53abfc8752f8edb57b5e0bf83ddba2aaeb71f1b300a2a5ac0e91155f874aa0dd"
+    },
+    "lec03-exercise-p024": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 24,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 24,
+      "canonical_japanese_slide_xml": "ppt/slides/slide24.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "e8b669ba95b36d82e2db73c73907f772eb8068705feda3a0a9c608a41aa63657",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "13d621872eae6c7d5f517ad403f0500c14d0c980af1e292749599b64e80fa370"
+    },
+    "lec03-exercise-p025": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 25,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 25,
+      "canonical_japanese_slide_xml": "ppt/slides/slide25.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "73e16c7962ec56a606b056947cd8807d7ca23ce0d4257972095cb65cf9562583",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "adc2a84249300729ff76131f9458928bf08fe2316be21fdcd29e340ad3e891e4"
+    },
+    "lec03-exercise-p026": {
+      "canonical_document_id": "lec03-exercise",
+      "canonical_japanese_page": 26,
+      "canonical_japanese_slide_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "canonical_japanese_slide_page": 26,
+      "canonical_japanese_slide_xml": "ppt/slides/slide26.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "561873bde6a3f86a7738d726227e8fd8838d9d3fafe7b40068e4a9fcdaa2c97c",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "85144e194446a3d7bbd05ccd3e1bdfcae3b9b2bfe78bfa35e2c0fcd3ac4d455d"
+    }
+  }
+}

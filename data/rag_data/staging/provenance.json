@@ -1,0 +1,913 @@
+{
+  "language": "ar",
+  "document_id": "lec03-main",
+  "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+  "canonical_source_path": "data/rag_data/lectures.json",
+  "page_number_semantics": "page is the canonical final Japanese PDF page (71-page edition), not an Arabic PDF page. Use translated_slide_page from provenance when citing the supplied 69-page Arabic slides; pages 32 and 58 have no supplied Arabic slide.",
+  "source_files": {
+    "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx": "730beea84d8b9be8c53323d29d454d31b3c573a8c9eaee1d9073bc3bf2f72e0c",
+    "day3/AIE2026_第3回_AIエージェント_1102.pptx": "fe4dde9bf46ab9059ece76b4378fe5a153383593de516518154d9e11d5d5f14a"
+  },
+  "common_processing": [
+    "Extracted text from PPTX in presentation order; avoided corrupted Arabic PDF text extraction.",
+    "Removed repeated copyright boilerplate and cover confidentiality footer from retrieval bodies; original files remain intact.",
+    "Preserved logical Arabic character order; no visual bidi reversal or PDF presentation-form conversion.",
+    "Existing illustrative Arabic localization of natural-language examples retained; API names, paths, schemas, and numeric claims preserved."
+  ],
+  "pages": {
+    "lec03-main-p001": {
+      "canonical_japanese_page": 1,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 1,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 1,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Translated the explicit logo transcription in the canonical Japanese corpus."
+      ],
+      "text_sha256": "f484a3f459d54bf162c09af50188a36e0f2796527fb2cdc57e42fb331ba2aa15"
+    },
+    "lec03-main-p002": {
+      "canonical_japanese_page": 2,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 2,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 2,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Restored the graduate-school qualification in the presenter's affiliation to match Japanese source."
+      ],
+      "text_sha256": "068a3ad8243dacc8aab2266330ef15f9ee7617b277c3ffbffb8f5fb58b2644e5"
+    },
+    "lec03-main-p003": {
+      "canonical_japanese_page": 3,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 4,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 3,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Updated heading, explanatory subtitle, table heading, and property ⑤ consequence to the final Japanese edition; moved Arabic slide 4 to canonical page 3."
+      ],
+      "text_sha256": "c8a342b90e15ddba94bd14ef9b763c1c5cf635e95e4686f326d516a4829c6a09"
+    },
+    "lec03-main-p004": {
+      "canonical_japanese_page": 4,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 3,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 4,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Reordered Arabic slide 3 to canonical page 4; substantive text unchanged."
+      ],
+      "text_sha256": "6e17a2b4388ce833998f25a4c33bc7141011c042faaf6bb35415273578ca4352"
+    },
+    "lec03-main-p005": {
+      "canonical_japanese_page": 5,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 5,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 5,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "4e69577a24d919f31c0f7c28a4c867f9ea28d704531fb529083145ee015f563d"
+    },
+    "lec03-main-p006": {
+      "canonical_japanese_page": 6,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 6,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 6,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "1abbf991a9498dbb05426ca7e7bcd219e0fd525a1f53aa1211dd60f580ee135a"
+    },
+    "lec03-main-p007": {
+      "canonical_japanese_page": 7,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 7,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 7,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "6162734c1e5ebdb7fd9da7c29b8cf89878b0c25c0534d880737f5165f9dea347"
+    },
+    "lec03-main-p008": {
+      "canonical_japanese_page": 8,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 8,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 8,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "263a3ff1f73b82bd28f1ede936d148cc76e4791dbb5efefff1a4b08ea370d9aa"
+    },
+    "lec03-main-p009": {
+      "canonical_japanese_page": 9,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 9,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 9,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "7d076de69b0aa73a4bd953bc68c1c4fd92771eaadb1dc92f914aa0abfbc96ffd"
+    },
+    "lec03-main-p010": {
+      "canonical_japanese_page": 10,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 10,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 10,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "1bb8bd096831dae1ee264de93cbe3594de63ec44fe0bd6026add92e19a623682"
+    },
+    "lec03-main-p011": {
+      "canonical_japanese_page": 11,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 11,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 11,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "851b1e20b1c5e540170ee6f8a5d453a40adeb4063ffee42da12aa735fd4707fb"
+    },
+    "lec03-main-p012": {
+      "canonical_japanese_page": 12,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 12,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 12,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "e47f66ef5f61f148f41b9328ddfc60932410be4eaf6d6606e29e13b8e6360ab9"
+    },
+    "lec03-main-p013": {
+      "canonical_japanese_page": 13,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 13,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 13,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "f8b9c7b83e8fe535c728902a9e4de0119501dbc83f5388cc746296fe9ae86f81"
+    },
+    "lec03-main-p014": {
+      "canonical_japanese_page": 14,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 14,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 14,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "1a2efb65e3140cee6c805410926a65e27e4ba1afd3b1743a14abe8796ac29ce4"
+    },
+    "lec03-main-p015": {
+      "canonical_japanese_page": 15,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 15,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 15,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "88a37571bbd2a0a81894032d65e66ed6dcb75ee3a61f0a878a579a8a4cec03e5"
+    },
+    "lec03-main-p016": {
+      "canonical_japanese_page": 16,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 16,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 16,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "f0f015727fc7440d1f441a42dd6672f3d60a3e5f09a5586afecedcd836a784d6"
+    },
+    "lec03-main-p017": {
+      "canonical_japanese_page": 17,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 17,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 17,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "9705db04dc77be9139ee8e21eb69499504dab2d2d9f4ca59d8328ec62f0f6f4c"
+    },
+    "lec03-main-p018": {
+      "canonical_japanese_page": 18,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 18,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 18,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "5503e445ffba95fbadbaa1cb6879e4922a9555d77c778db74e9ea3c471bdb5fa"
+    },
+    "lec03-main-p019": {
+      "canonical_japanese_page": 19,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 19,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 19,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Restored both charts' source-transcribed axes, series, and labels, which are embedded chart/image content absent from extracted PPTX text. No curve measurements were invented."
+      ],
+      "text_sha256": "dc145eb719e1ff6b7096f954e554b0f401693fd0ef145fe306807e70ca0841f9"
+    },
+    "lec03-main-p020": {
+      "canonical_japanese_page": 20,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 20,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 20,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "90581cb44102eaf60f0bfa8647b7f1efbe084fb4f6e365c2cef428a078a1f6f1"
+    },
+    "lec03-main-p021": {
+      "canonical_japanese_page": 21,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 21,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 21,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "b4fac865d1b846a149ce9d62fd3669dc5bb93196b5e031ac88aa8f25cd880ce7"
+    },
+    "lec03-main-p022": {
+      "canonical_japanese_page": 22,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 22,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 22,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "d71bf2890b55d2efe0649851c9688af61cf4e51f7e1c3a9058a920fc9ec001c2"
+    },
+    "lec03-main-p023": {
+      "canonical_japanese_page": 23,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 23,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 23,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "b88697859d2b1421047945210dfd0504dd1b2ae936e0213bd11d7a4c274c7459"
+    },
+    "lec03-main-p024": {
+      "canonical_japanese_page": 24,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 24,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 24,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Expanded MCP in the title as in final Japanese edition."
+      ],
+      "text_sha256": "f8b0bbbcaa95c9d797fb5201d028584ce576771098b68470f252a92868952a92"
+    },
+    "lec03-main-p025": {
+      "canonical_japanese_page": 25,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 25,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 25,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "05daf493c7f66eb6d058958401ceed3c03e202e181fbe0a1b8cbd778419aa066"
+    },
+    "lec03-main-p026": {
+      "canonical_japanese_page": 26,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 26,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 26,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Added the final Japanese sentence about the convenience/security tradeoff."
+      ],
+      "text_sha256": "2ae7e7490cded323e50a8d7610fc132a40a9f2632e0eabc395e59e6074e020c4"
+    },
+    "lec03-main-p027": {
+      "canonical_japanese_page": 27,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 27,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 27,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "b86df79f4c78a5252cf3b216750ed442a259c8506c25c9b30536b0879b1a5620"
+    },
+    "lec03-main-p028": {
+      "canonical_japanese_page": 28,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 28,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 28,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Updated title to final Japanese edition; other content retained."
+      ],
+      "text_sha256": "110c424776b593dae317bb109dea38389316906b43aa49ef829ed6be32e07718"
+    },
+    "lec03-main-p029": {
+      "canonical_japanese_page": 29,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 29,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 29,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Added background-task failure/stoppage detection caveat and corrected resident-agent reference to Part 2, following final Japanese source."
+      ],
+      "text_sha256": "051e1f1053b7955b726a413882af935d43d51d882c67f2e343c8ece7d709fd62"
+    },
+    "lec03-main-p030": {
+      "canonical_japanese_page": 30,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 30,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 30,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "0b13572cea7fa0754405fc2f178090da8760e407c5eb509d34888886f800ff4a"
+    },
+    "lec03-main-p031": {
+      "canonical_japanese_page": 31,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 31,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 31,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Added final Japanese guidance on selecting Opus/Haiku per subagent and reducing cost."
+      ],
+      "text_sha256": "725faf09dd2f6340586043749fde2abd8d6e948df5fdf08491a19d36486bc6d3"
+    },
+    "lec03-main-p032": {
+      "canonical_japanese_page": 32,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": null,
+      "translated_slide_page": null,
+      "related_arabic_pdf": null,
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 32,
+      "status": "new_translation_from_final_japanese",
+      "corrections": [
+        "New page in final Japanese edition; translated directly from the canonical Japanese corpus. No corresponding page in the uploaded Arabic slides."
+      ],
+      "text_sha256": "b2c7fe9cf74838c26aeccd73cf71ec2ab119ef16a224baa9f6cdd378cfd09404"
+    },
+    "lec03-main-p033": {
+      "canonical_japanese_page": 33,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 32,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 33,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "54d29cf026dd01ebc64c8234bf37bf9eaf18022291d6f9d94af285c5699d83dd"
+    },
+    "lec03-main-p034": {
+      "canonical_japanese_page": 34,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 33,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 34,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Removed the draft-only text about reinterpreting free-form output, which is absent from the final Japanese page."
+      ],
+      "text_sha256": "5ca5c6c6c5ab243a07b4ade597ebf0c18564e55e36de48339da651d337194df8"
+    },
+    "lec03-main-p035": {
+      "canonical_japanese_page": 35,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 34,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 35,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "b4979a2980deabe38c7ffffecb542e6705856a28609181ea9e0d1ac13b3b2306"
+    },
+    "lec03-main-p036": {
+      "canonical_japanese_page": 36,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 35,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 36,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Updated general decision-model heading while retaining Jev as the example in the page body."
+      ],
+      "text_sha256": "bdc395f023778d6df9838fbd9f6fabd8bd2c005792827973f948963b9b3042eb"
+    },
+    "lec03-main-p037": {
+      "canonical_japanese_page": 37,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 36,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 37,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "d3576f837f23ad23c46365c54bc3c1ef186d6d71fb02d5b948134de6ae5c9d2c"
+    },
+    "lec03-main-p038": {
+      "canonical_japanese_page": 38,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 37,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 38,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "870a58333426772148c10902fa6efb2342c1dc32ceaff5df43a80e0af8811395"
+    },
+    "lec03-main-p039": {
+      "canonical_japanese_page": 39,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 38,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 39,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Repaired missing word separation in extracted Arabic diagram text."
+      ],
+      "text_sha256": "715c840f016afe5a6830c2104991ec34777a74ca628323250d11e581f56edb29"
+    },
+    "lec03-main-p040": {
+      "canonical_japanese_page": 40,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 39,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 40,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "a308ea61fb2691df224241118c0d64c4213f1571c03da72f10e5bf19a75dd871"
+    },
+    "lec03-main-p041": {
+      "canonical_japanese_page": 41,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 40,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 41,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "8d9ee2808702cee5d838fe323a6a7e0729467ad0db1be89f690c8fcd2ef49b23"
+    },
+    "lec03-main-p042": {
+      "canonical_japanese_page": 42,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 41,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 42,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "0f060037782cf04f695abe27021d17355fd02821a18dce42a0fabe60fa1d0069"
+    },
+    "lec03-main-p043": {
+      "canonical_japanese_page": 43,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 42,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 43,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "1f761bdfb0b6c9daea157dbc565bc0b0aef691667f274165a5a78f250041d59c"
+    },
+    "lec03-main-p044": {
+      "canonical_japanese_page": 44,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 43,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 44,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "cbdb5caf338f0748e64282a46afd4bda9a3a8ad9522fd75237394cdb8a53905a"
+    },
+    "lec03-main-p045": {
+      "canonical_japanese_page": 45,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 44,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 45,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "234b1a5cbd19d44c3346a432ff01e29760fbc74661d7b3bd5d17e5d1252cac89"
+    },
+    "lec03-main-p046": {
+      "canonical_japanese_page": 46,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 45,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 46,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Corrected operator overwriting/overriding terminology to reflect Japanese 演算子の上書き, rather than general operator overloading."
+      ],
+      "text_sha256": "7a5bbe6c57b26573760a7f79d763ce50f1cdfff4acc9cf32010b7a422798b8c3"
+    },
+    "lec03-main-p047": {
+      "canonical_japanese_page": 47,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 46,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 47,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Joined a split table-cell phrase into correct Arabic without changing the read-only-test claim."
+      ],
+      "text_sha256": "e9739858198b7c396e2cf0c7790a11b72921334893448dd1edd42d0f1ff4889c"
+    },
+    "lec03-main-p048": {
+      "canonical_japanese_page": 48,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 47,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 48,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "80956a03e3967ba1ab3f7c7117dff5e664bf412ae5e8e7dbea6966bbec6594ae"
+    },
+    "lec03-main-p049": {
+      "canonical_japanese_page": 49,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 48,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 49,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "b754fff91d76c18342ecf50ad946e98e89e868591ffc30060493495d6bbe1c70"
+    },
+    "lec03-main-p050": {
+      "canonical_japanese_page": 50,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 49,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 50,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Added final Japanese explanations of risks from cloned instructions, public skills/scripts, and persistent injected memory."
+      ],
+      "text_sha256": "d8881f4e6475a24c281ef2690d71c1bb441a1bd6e6482ddaea6ca0ff8abfdca9"
+    },
+    "lec03-main-p051": {
+      "canonical_japanese_page": 51,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 50,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 51,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "cf269551e4ea6a60173d4fc528ea452cbfd4f9e4fdf5976bb8382f02997ff0ae"
+    },
+    "lec03-main-p052": {
+      "canonical_japanese_page": 52,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 51,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 52,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "97b2d657aad9a219eadbee77b7ebe8aed91e003a90c2884d5298bdadaa9073eb"
+    },
+    "lec03-main-p053": {
+      "canonical_japanese_page": 53,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 52,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 53,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Removed the draft-only final bullet, preserving the final page's actual default key-read behavior in the diagram and source note."
+      ],
+      "text_sha256": "8744b848fc4abbd3a60b7077c4998fd3fd985d01f12ee3e87f2ac933d63d9593"
+    },
+    "lec03-main-p054": {
+      "canonical_japanese_page": 54,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 53,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 54,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "3c032f850d7ade7a1c8b75d03e3ef71c00d0ae8eef92c258f9658b1934d6d780"
+    },
+    "lec03-main-p055": {
+      "canonical_japanese_page": 55,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 54,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 55,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "a8d92690c0eceb331ea378af0244690a686d60f4ac7a15ac8ad93fec52a89a4e"
+    },
+    "lec03-main-p056": {
+      "canonical_japanese_page": 56,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 55,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 56,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "fa29b292b92a384aec76cd1be0a22bf209384c93c10d1aa0fe076803f924ac54"
+    },
+    "lec03-main-p057": {
+      "canonical_japanese_page": 57,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 56,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 57,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "da715fe9e676b2fdca7693687b7963e3f122bc36cae6bf42d72c4fdde483ac8c"
+    },
+    "lec03-main-p058": {
+      "canonical_japanese_page": 58,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": null,
+      "translated_slide_page": null,
+      "related_arabic_pdf": null,
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 58,
+      "status": "new_translation_from_final_japanese",
+      "corrections": [
+        "New page in final Japanese edition; translated directly from the canonical Japanese corpus. No corresponding page in the uploaded Arabic slides."
+      ],
+      "text_sha256": "4060f08596f386c52c0cbfdf3eca229bda1355fecfdaf5e178e3b650f059128b"
+    },
+    "lec03-main-p059": {
+      "canonical_japanese_page": 59,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 57,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 59,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Added final Japanese RSI/harness-summary point and kept the full structured-output/tool-calling section name."
+      ],
+      "text_sha256": "fbac3bf2767f836c4359370d4041bf7fc45aadb1666dcfb032106e08b8266723"
+    },
+    "lec03-main-p060": {
+      "canonical_japanese_page": 60,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 58,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 60,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "cb63078cb556815487569a456a3eec5eb31cbca905ef80f3c55e46c349e1d5d4"
+    },
+    "lec03-main-p061": {
+      "canonical_japanese_page": 61,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 59,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 61,
+      "status": "reviewed_and_corrected_translation",
+      "corrections": [
+        "Corrected standard/built-in SDK support to avoid incorrectly implying that sandbox execution is enabled by default; independent French-agent review finding."
+      ],
+      "text_sha256": "230c03d087df7bcad79d82776969bb572f2abbe71410beea82610e096a158dbf"
+    },
+    "lec03-main-p062": {
+      "canonical_japanese_page": 62,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 60,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 62,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "0f592493e857e2926f27e62d4496dae53129c9ff262c87bf5ba6ecaf4d9afc06"
+    },
+    "lec03-main-p063": {
+      "canonical_japanese_page": 63,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 61,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 63,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "47991b430cd6f6dbaae2d07856b2c727af668200e27c8a6fe8f01e2e6d9bce48"
+    },
+    "lec03-main-p064": {
+      "canonical_japanese_page": 64,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 62,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 64,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "98f07b258f2c49b47b38e76d342d15a74d774d83172df8ee9b5b021244c5543d"
+    },
+    "lec03-main-p065": {
+      "canonical_japanese_page": 65,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 63,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 65,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "f02d83e3515bbf33c54ff90568d03e79862619690281c61393d0112e2e2cc3fb"
+    },
+    "lec03-main-p066": {
+      "canonical_japanese_page": 66,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 64,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 66,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "a3d94f8862101ce5a8eb761b65a53b9ba06b3fb2208570757c05651d81122043"
+    },
+    "lec03-main-p067": {
+      "canonical_japanese_page": 67,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 65,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 67,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "ea26508cd86afb78ee6794501d305cdebe317f81176ef2dff1bd361ad9c7cf02"
+    },
+    "lec03-main-p068": {
+      "canonical_japanese_page": 68,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 66,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 68,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "a1de79fc2862607346160a9652777200073639bfb5dae87c71ad5c9df239f68b"
+    },
+    "lec03-main-p069": {
+      "canonical_japanese_page": 69,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 67,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 69,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "f10c00f96087c1ce4782f01b3e14381f3c7cf03c485b0614b72fc3821d139491"
+    },
+    "lec03-main-p070": {
+      "canonical_japanese_page": 70,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 68,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 70,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "294683d906e45e9f4751917083886d322a3b09f05a7968f12a671680769eeca1"
+    },
+    "lec03-main-p071": {
+      "canonical_japanese_page": 71,
+      "canonical_source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "translated_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pptx",
+      "translated_slide_page": 69,
+      "related_arabic_pdf": "day3/Lecture 3 - AI Agents/Lecture/pdf/المحاضرة 3 - وكلاء الذكاء الاصطناعي_ar.pdf",
+      "japanese_final_filename": "day3/AIE2026_第3回_AIエージェント_1102.pptx",
+      "japanese_final_slide_page": 71,
+      "status": "reused_existing_arabic_translation",
+      "corrections": [],
+      "text_sha256": "fe2756a4f226167aa03218e0d32c7754e11e484f09675e7c976e254d75d07c94"
+    }
+  }
+}

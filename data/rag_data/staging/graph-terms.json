@@ -1,0 +1,724 @@
+[
+  {
+    "id": "term:ai-engineering",
+    "kind": "term",
+    "title": "هندسة الذكاء الاصطناعي",
+    "aliases": [
+      "AI Engineering",
+      "هندسة الذكاء الاصطناعي"
+    ]
+  },
+  {
+    "id": "term:evaluation-loop",
+    "kind": "term",
+    "title": "دورة التقييم والتحسين",
+    "aliases": [
+      "دورة التحسين",
+      "دورة التقييم والتحسين"
+    ]
+  },
+  {
+    "id": "term:llm",
+    "kind": "term",
+    "title": "النموذج اللغوي الكبير (LLM)",
+    "aliases": [
+      "LLM",
+      "النموذج اللغوي الكبير (LLM)",
+      "Large Language Model",
+      "النموذج اللغوي الكبير"
+    ]
+  },
+  {
+    "id": "term:token",
+    "kind": "term",
+    "title": "الرمز (token)",
+    "aliases": [
+      "token",
+      "الرمز"
+    ]
+  },
+  {
+    "id": "term:context-window",
+    "kind": "term",
+    "title": "نافذة السياق",
+    "aliases": [
+      "context window",
+      "نافذة السياق",
+      "طول السياق"
+    ]
+  },
+  {
+    "id": "term:prompt",
+    "kind": "term",
+    "title": "الموجّه",
+    "aliases": [
+      "prompt",
+      "الموجّه"
+    ]
+  },
+  {
+    "id": "term:system-prompt",
+    "kind": "term",
+    "title": "موجّه النظام",
+    "aliases": [
+      "instructions",
+      "system instruction",
+      "موجّه النظام",
+      "نص التعليمات"
+    ]
+  },
+  {
+    "id": "term:temperature",
+    "kind": "term",
+    "title": "معامل الحرارة (temperature)",
+    "aliases": [
+      "temperature",
+      "معامل الحرارة"
+    ]
+  },
+  {
+    "id": "term:hallucination",
+    "kind": "term",
+    "title": "الهلوسة",
+    "aliases": [
+      "hallucination",
+      "الهلوسة",
+      "الهلوسة"
+    ]
+  },
+  {
+    "id": "term:api",
+    "kind": "term",
+    "title": "واجهة برمجة التطبيقات (API)",
+    "aliases": [
+      "API",
+      "Application Programming Interface",
+      "Web API"
+    ]
+  },
+  {
+    "id": "term:api-key",
+    "kind": "term",
+    "title": "مفتاح API",
+    "aliases": [
+      "API key",
+      "مفتاح API"
+    ]
+  },
+  {
+    "id": "term:environment-variable",
+    "kind": "term",
+    "title": "متغير البيئة",
+    "aliases": [
+      "env",
+      "environment variable",
+      "متغير البيئة"
+    ]
+  },
+  {
+    "id": "term:rate-limit",
+    "kind": "term",
+    "title": "حد معدل الطلبات",
+    "aliases": [
+      "الخطأ 429",
+      "rate limit",
+      "حد معدل الطلبات"
+    ]
+  },
+  {
+    "id": "term:codespaces",
+    "kind": "term",
+    "title": "GitHub Codespaces",
+    "aliases": [
+      "Codespaces",
+      "GitHub Codespaces",
+      "مساحات الشيفرة"
+    ]
+  },
+  {
+    "id": "term:devcontainer",
+    "kind": "term",
+    "title": "حاوية التطوير (devcontainer)",
+    "aliases": [
+      "Dev Container",
+      "devcontainer",
+      "devcontainer.json"
+    ]
+  },
+  {
+    "id": "term:codespaces-secret",
+    "kind": "term",
+    "title": "سر Codespaces",
+    "aliases": [
+      "Codespaces secret",
+      "سر Codespaces"
+    ]
+  },
+  {
+    "id": "term:fork",
+    "kind": "term",
+    "title": "نسخة متفرعة (fork)",
+    "aliases": [
+      "fork",
+      "نسخة متفرعة"
+    ]
+  },
+  {
+    "id": "term:branch",
+    "kind": "term",
+    "title": "الفرع",
+    "aliases": [
+      "branch",
+      "الفرع"
+    ]
+  },
+  {
+    "id": "term:pull-request",
+    "kind": "term",
+    "title": "طلب السحب (PR)",
+    "aliases": [
+      "PR",
+      "Pull Request",
+      "طلب السحب (PR)"
+    ]
+  },
+  {
+    "id": "term:github-copilot",
+    "kind": "term",
+    "title": "GitHub Copilot",
+    "aliases": [
+      "Copilot",
+      "GitHub Copilot"
+    ]
+  },
+  {
+    "id": "term:code-completion",
+    "kind": "term",
+    "title": "إكمال الشيفرة",
+    "aliases": [
+      "inline suggestion",
+      "الإكمال داخل السطر",
+      "إكمال الشيفرة"
+    ]
+  },
+  {
+    "id": "term:coding-agent",
+    "kind": "term",
+    "title": "وكيل البرمجة",
+    "aliases": [
+      "وكيل البرمجة بالذكاء الاصطناعي",
+      "Coding Agent",
+      "وكيل البرمجة"
+    ]
+  },
+  {
+    "id": "term:pretraining",
+    "kind": "term",
+    "title": "التدريب المسبق",
+    "aliases": [
+      "pre-training",
+      "التدريب المسبق",
+      "التدريب المسبق"
+    ]
+  },
+  {
+    "id": "term:fine-tuning",
+    "kind": "term",
+    "title": "الضبط الدقيق",
+    "aliases": [
+      "FT",
+      "fine-tuning",
+      "الضبط الدقيق",
+      "التدريب الإضافي"
+    ]
+  },
+  {
+    "id": "term:sft",
+    "kind": "term",
+    "title": "الضبط الدقيق الخاضع للإشراف (SFT)",
+    "aliases": [
+      "SFT",
+      "Supervised Fine-Tuning",
+      "الضبط بالتعليمات",
+      "الضبط الدقيق الخاضع للإشراف (SFT)"
+    ]
+  },
+  {
+    "id": "term:peft",
+    "kind": "term",
+    "title": "الضبط الدقيق الفعال من حيث المعلمات (PEFT)",
+    "aliases": [
+      "PEFT",
+      "Parameter-Efficient Fine-Tuning",
+      "الضبط الدقيق الفعال من حيث المعلمات"
+    ]
+  },
+  {
+    "id": "term:lora",
+    "kind": "term",
+    "title": "LoRA",
+    "aliases": [
+      "LoRA",
+      "Low-Rank Adaptation"
+    ]
+  },
+  {
+    "id": "term:lora-rank",
+    "kind": "term",
+    "title": "الرتبة (r في LoRA)",
+    "aliases": [
+      "rank",
+      "الرتبة (r في LoRA)"
+    ]
+  },
+  {
+    "id": "term:qlora",
+    "kind": "term",
+    "title": "QLoRA",
+    "aliases": [
+      "QLoRA",
+      "Quantized LoRA"
+    ]
+  },
+  {
+    "id": "term:quantization",
+    "kind": "term",
+    "title": "التكميم",
+    "aliases": [
+      "quantization",
+      "التكميم"
+    ]
+  },
+  {
+    "id": "term:learning-rate",
+    "kind": "term",
+    "title": "معدل التعلّم",
+    "aliases": [
+      "learning rate",
+      "lr",
+      "معدل التعلّم"
+    ]
+  },
+  {
+    "id": "term:epoch",
+    "kind": "term",
+    "title": "دورة التدريب (epoch)",
+    "aliases": [
+      "epoch",
+      "دورة التدريب"
+    ]
+  },
+  {
+    "id": "term:overfitting",
+    "kind": "term",
+    "title": "فرط التكيّف",
+    "aliases": [
+      "overfitting",
+      "فرط التكيّف",
+      "فرط التكيّف"
+    ]
+  },
+  {
+    "id": "term:huggingface-hub",
+    "kind": "term",
+    "title": "Hugging Face Hub",
+    "aliases": [
+      "HF Hub",
+      "Hugging Face",
+      "Hugging Face Hub"
+    ]
+  },
+  {
+    "id": "term:ai-agent",
+    "kind": "term",
+    "title": "وكيل الذكاء الاصطناعي",
+    "aliases": [
+      "وكيل الذكاء الاصطناعي",
+      "agent",
+      "الوكيل"
+    ]
+  },
+  {
+    "id": "term:agent-loop",
+    "kind": "term",
+    "title": "حلقة الوكيل",
+    "aliases": [
+      "agent loop",
+      "حلقة الوكيل",
+      "حلقة استدعاء الأدوات"
+    ]
+  },
+  {
+    "id": "term:tool",
+    "kind": "term",
+    "title": "الأداة (Tool use / Function calling)",
+    "aliases": [
+      "Function calling",
+      "Tool use",
+      "الأداة",
+      "استدعاء الأدوات",
+      "الأداة (Tool use / Function calling)"
+    ]
+  },
+  {
+    "id": "term:tool-description",
+    "kind": "term",
+    "title": "وصف الأداة",
+    "aliases": [
+      "docstring",
+      "tool schema",
+      "وصف الأداة",
+      "مخطط الأداة"
+    ]
+  },
+  {
+    "id": "term:structured-output",
+    "kind": "term",
+    "title": "المخرجات المهيكلة",
+    "aliases": [
+      "مخرجات JSON",
+      "structured output",
+      "المخرجات المهيكلة"
+    ]
+  },
+  {
+    "id": "term:harness",
+    "kind": "term",
+    "title": "الـ harness",
+    "aliases": [
+      "agent harness",
+      "الـ harness الخاص بالوكيل",
+      "الـ harness"
+    ]
+  },
+  {
+    "id": "term:pi",
+    "kind": "term",
+    "title": "Pi",
+    "aliases": [
+      "Pi",
+      "Pi coding agent",
+      "pi agent"
+    ]
+  },
+  {
+    "id": "term:pydantic-ai",
+    "kind": "term",
+    "title": "Pydantic AI",
+    "aliases": [
+      "Pydantic AI",
+      "PydanticAI",
+      "pydantic-ai"
+    ]
+  },
+  {
+    "id": "term:adk",
+    "kind": "term",
+    "title": "عدة تطوير الوكلاء (ADK)",
+    "aliases": [
+      "ADK",
+      "ADK（Agent Development Kit）",
+      "Agent Development Kit",
+      "google-adk"
+    ]
+  },
+  {
+    "id": "term:mcp",
+    "kind": "term",
+    "title": "بروتوكول سياق النموذج (MCP)",
+    "aliases": [
+      "MCP",
+      "MCP（Model Context Protocol）",
+      "Model Context Protocol"
+    ]
+  },
+  {
+    "id": "term:guardrail",
+    "kind": "term",
+    "title": "حاجز الحماية",
+    "aliases": [
+      "guardrail",
+      "حاجز الحماية"
+    ]
+  },
+  {
+    "id": "term:human-in-the-loop",
+    "kind": "term",
+    "title": "الإنسان ضمن الحلقة (Human-in-the-loop)",
+    "aliases": [
+      "HITL",
+      "Human-in-the-loop",
+      "الموافقة البشرية",
+      "إدراج خطوة تأكيد"
+    ]
+  },
+  {
+    "id": "term:test-model",
+    "kind": "term",
+    "title": "نموذج الاختبار (TestModel)",
+    "aliases": [
+      "TestModel",
+      "نموذج للاختبار"
+    ]
+  },
+  {
+    "id": "term:homework-levels",
+    "kind": "term",
+    "title": "المستويات الثلاثة للواجب",
+    "aliases": [
+      "ثلاثة مستويات",
+      "المستويات الثلاثة للواجب",
+      "مستوى الواجب"
+    ]
+  },
+  {
+    "id": "term:answer-md",
+    "kind": "term",
+    "title": "ملف الإجابات answer.md",
+    "aliases": [
+      "answer.md",
+      "ملف الإجابات"
+    ]
+  },
+  {
+    "id": "term:lec-start-tag",
+    "kind": "term",
+    "title": "الوسم lecNN-start",
+    "aliases": [
+      "lec03-start",
+      "الوسم lecNN-start",
+      "وسم البداية"
+    ]
+  },
+  {
+    "id": "term:default-model",
+    "kind": "term",
+    "title": "النموذج الافتراضي",
+    "aliases": [
+      "gemini-3.5-flash-lite",
+      "النموذج الافتراضي",
+      "النموذج الافتراضي"
+    ]
+  },
+  {
+    "id": "term:external-tool",
+    "kind": "term",
+    "title": "الأداة الخارجية",
+    "aliases": [
+      "external tool",
+      "الخدمة الخارجية",
+      "الأداة الخارجية"
+    ]
+  },
+  {
+    "id": "term:mcp-server",
+    "kind": "term",
+    "title": "خادم MCP",
+    "aliases": [
+      "MCP server",
+      "خادم MCP"
+    ]
+  },
+  {
+    "id": "term:mcp-client",
+    "kind": "term",
+    "title": "عميل MCP",
+    "aliases": [
+      "MCP client",
+      "عميل MCP",
+      "مضيف MCP"
+    ]
+  },
+  {
+    "id": "term:mcp-transport",
+    "kind": "term",
+    "title": "آلية النقل (stdio و Streamable HTTP)",
+    "aliases": [
+      "آلية النقل في MCP",
+      "Streamable HTTP",
+      "stdio",
+      "transport",
+      "آلية النقل (stdio و Streamable HTTP)"
+    ]
+  },
+  {
+    "id": "term:mcp-config",
+    "kind": "term",
+    "title": "إعدادات mcpServers",
+    "aliases": [
+      "ملف إعدادات MCP",
+      "mcp.json",
+      "mcpServers",
+      "إعدادات mcpServers",
+      "mcp_servers.json"
+    ]
+  },
+  {
+    "id": "term:tool-namespace",
+    "kind": "term",
+    "title": "نطاق أسماء الأدوات",
+    "aliases": [
+      "prefix",
+      "نطاق أسماء الأدوات",
+      "بادئة اسم الأداة",
+      "تعارض الأسماء"
+    ]
+  },
+  {
+    "id": "term:fetch-server",
+    "kind": "term",
+    "title": "خادم fetch",
+    "aliases": [
+      "أداة جلب صفحات الويب",
+      "fetch",
+      "خادم fetch",
+      "mcp-server-fetch"
+    ]
+  },
+  {
+    "id": "term:evaluation-dataset",
+    "kind": "term",
+    "title": "مجموعة التقييم",
+    "aliases": [
+      "eval set",
+      "مجموعة الاختبار",
+      "مجموعة التقييم",
+      "مجموعة بيانات التقييم"
+    ]
+  },
+  {
+    "id": "term:edge-case",
+    "kind": "term",
+    "title": "الحالة الحدّية",
+    "aliases": [
+      "edge case",
+      "الحالة الحدّية",
+      "الحالة الحدّية"
+    ]
+  },
+  {
+    "id": "term:rubric",
+    "kind": "term",
+    "title": "معايير التقييم",
+    "aliases": [
+      "rubric",
+      "سلم التقييم",
+      "معايير التصحيح",
+      "معايير التقييم"
+    ]
+  },
+  {
+    "id": "term:llm-as-a-judge",
+    "kind": "term",
+    "title": "النموذج اللغوي كمُحكِّم (LLM-as-a-Judge)",
+    "aliases": [
+      "LLM judge",
+      "LLM-as-a-Judge",
+      "التصحيح باستخدام LLM",
+      "التصحيح التلقائي"
+    ]
+  },
+  {
+    "id": "term:agreement-rate",
+    "kind": "term",
+    "title": "نسبة الاتفاق",
+    "aliases": [
+      "agreement rate",
+      "inter-rater agreement",
+      "نسبة الاتفاق",
+      "الاتفاق مع المُقيِّم البشري"
+    ]
+  },
+  {
+    "id": "term:needs-review",
+    "kind": "term",
+    "title": "يتطلب المراجعة",
+    "aliases": [
+      "unsure",
+      "المراجعة البشرية",
+      "يتطلب المراجعة",
+      "يتطلب التحقق"
+    ]
+  },
+  {
+    "id": "term:position-bias",
+    "kind": "term",
+    "title": "تحيز الموضع",
+    "aliases": [
+      "position bias",
+      "تحيز الموضع",
+      "تحيز الترتيب"
+    ]
+  },
+  {
+    "id": "term:rag",
+    "kind": "term",
+    "title": "التوليد المعزّز بالاسترجاع (RAG)",
+    "aliases": [
+      "RAG",
+      "Retrieval Augmented Generation",
+      "Retrieval-Augmented Generation",
+      "التوليد المعزّز بالاسترجاع"
+    ]
+  },
+  {
+    "id": "term:in-context-learning",
+    "kind": "term",
+    "title": "التعلّم داخل السياق",
+    "aliases": [
+      "ICL",
+      "In-Context Learning",
+      "التعلّم داخل السياق"
+    ]
+  },
+  {
+    "id": "term:chunking",
+    "kind": "term",
+    "title": "تقسيم النص إلى مقاطع",
+    "aliases": [
+      "chunk",
+      "chunking",
+      "تقسيم النص إلى مقاطع",
+      "المقطع"
+    ]
+  },
+  {
+    "id": "term:embedding",
+    "kind": "term",
+    "title": "التضمين",
+    "aliases": [
+      "embedding",
+      "embeddings",
+      "التضمين",
+      "متجه التضمين"
+    ]
+  },
+  {
+    "id": "term:memory",
+    "kind": "term",
+    "title": "الذاكرة",
+    "aliases": [
+      "MEMORY.md",
+      "memory",
+      "الذاكرة"
+    ]
+  },
+  {
+    "id": "term:tree-structure",
+    "kind": "term",
+    "title": "البنية الشجرية",
+    "aliases": [
+      "tree structure",
+      "البنية الشجرية"
+    ]
+  },
+  {
+    "id": "term:knowledge-graph",
+    "kind": "term",
+    "title": "الرسم البياني المعرفي",
+    "aliases": [
+      "knowledge graph",
+      "الرسم البياني المعرفي"
+    ]
+  }
+]

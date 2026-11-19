@@ -1,0 +1,424 @@
+{
+  "language": "ar",
+  "document_id": "lec04-exercise",
+  "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+  "canonical_source_json": "source-documents.json",
+  "canonical_source_json_sha256": "f6022c177ec1b5575b56d21307a5ae2aa09c586047398a17e1e4b86a56e99dce",
+  "canonical_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+  "canonical_japanese_file_sha256": "d9a906c631803e2d817144c4a2b460ff5450628cb21b5242b50b76e2f382bc94",
+  "canonical_pages": 23,
+  "translation_origin": "Newly translated from the canonical Japanese corpus; no Arabic exercise slides were supplied.",
+  "citation_policy": "Corpus page is the canonical Japanese page. Each Japanese PPTX slide was verified to match that canonical page after disregarding whitespace, bullet markers and repetitive copyright, with explicit image supplements translated separately. No physical Arabic slide/PDF page exists or is claimed.",
+  "normalization": "Logical Unicode Arabic; all instructional text retained; repeated copyright footer removed; logo and cover disclosure text retained; layout-only line wraps repaired, including source-wrapped shell commands and a repository slug.",
+  "terminology_reference": "Existing Arabic course app/agent.py, app/tools.py, data/eval/rubric.md, tools/annotate.py and lectures/03/problem.md; used for equivalent terminology, actual UI button wording, the basic/applied/advanced level labels and the Lecture NN output marker, not as authority to alter Japanese lesson content.",
+  "pages": {
+    "lec04-exercise-p001": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 1,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 1,
+      "canonical_japanese_slide_xml": "ppt/slides/slide1.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "5e95c69c2cd1fe4b2ae1bfea8996237051fb0b0f05f4daaa66955e03a56b1f81",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated.",
+        "Translated all explicit image/logo/UI transcription included in the canonical source page."
+      ],
+      "reviewed_content_sha256": "55429f4a757f84166015d0efcd441e66c45648032ecba570726cea61b354ad23"
+    },
+    "lec04-exercise-p002": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 2,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 2,
+      "canonical_japanese_slide_xml": "ppt/slides/slide2.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "382c36f2972c0c8e041cf178f0c7f7850c2c4c1fa3a8a36ab640088555078666",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "615d3b9d37c3e8f3301a228060d246162d84084bc1cc5881558b32a7fcb4ba37"
+    },
+    "lec04-exercise-p003": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 3,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 3,
+      "canonical_japanese_slide_xml": "ppt/slides/slide3.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "4ecd6cdc04de3960f5a1bc621d9dd5b3784e3da5c671fe8164298f4c064fcd30",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "967ff00e80e97a13516d34e0615da1ee0b74f95b8bf3eb92cf22103f9fa77a56"
+    },
+    "lec04-exercise-p004": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 4,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 4,
+      "canonical_japanese_slide_xml": "ppt/slides/slide4.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "3068557fe0e9b2bf4c6dced3284dddc5701917d41846dccd88882f0c9476d80d",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated.",
+        "Japanese 第N回 output-marker examples adapted to the existing Arabic repository's literal Lecture NN marker, preserving the code-checkable lecture-reference requirement."
+      ],
+      "reviewed_content_sha256": "ea03bc6aeaac24d4fe782bef349de2def3e9b07a1e18603e8b07f50119670685"
+    },
+    "lec04-exercise-p005": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 5,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 5,
+      "canonical_japanese_slide_xml": "ppt/slides/slide5.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "dc43d91ca13280657d7b97dcd1db69a6d8ecedf5f9067210ec43a40479576469",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated.",
+        "Japanese 第N回 output-marker examples adapted to the existing Arabic repository's literal Lecture NN marker, preserving the code-checkable lecture-reference requirement."
+      ],
+      "reviewed_content_sha256": "fc4e15b8146b646772639adeab49452067b8004e0e7075c78ead77c1e1a028b1"
+    },
+    "lec04-exercise-p006": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 6,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 6,
+      "canonical_japanese_slide_xml": "ppt/slides/slide6.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "e0eb13f6434a342fd045e7fd9962c0acbeb7f80b127e6254bdc84f97256ed54e",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "409a190830cdac10650c466f707f2eed4e04582914b5a4056b791f514efdf0d7"
+    },
+    "lec04-exercise-p007": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 7,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 7,
+      "canonical_japanese_slide_xml": "ppt/slides/slide7.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "3c28c2eeb4526cda7093339a4261ed91efb85df230fe6898c0b9d3dc0b39b20a",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "55c92b00a2e57a5d01b2cd463acc2647845281936af6c0f58b3be2438b6b12ff"
+    },
+    "lec04-exercise-p008": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 8,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 8,
+      "canonical_japanese_slide_xml": "ppt/slides/slide8.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "5e8dd273c9a15220d73a34db5f52766bcda8157859f9acbc5128a7cb36bdc495",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated.",
+        "Japanese 第N回 output-marker examples adapted to the existing Arabic repository's literal Lecture NN marker, preserving the code-checkable lecture-reference requirement.",
+        "Retained source distinction: four criteria judged by LLM, five human labels including a lecture-reference check performed by code."
+      ],
+      "reviewed_content_sha256": "3d2bdda110fc0fbf03f8525f3606e49588ec5e11144c2b23f6488b613d0d27aa"
+    },
+    "lec04-exercise-p009": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 9,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 9,
+      "canonical_japanese_slide_xml": "ppt/slides/slide9.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "f488f7a00204a6bf00f7c9d590659856b1d3cf46ef3cf1853a0e84dd58145f9a",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "5c8cafbe85d42a1750bd3dfcb7c5c6c85d522bb478d2bd272a1548b8cbe25943"
+    },
+    "lec04-exercise-p010": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 10,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 10,
+      "canonical_japanese_slide_xml": "ppt/slides/slide10.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "9459738547f31935df1be53291d79c58cf1015e4357d97ce6a176acd5e9ddf6a",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated.",
+        "Retained source distinction: four criteria judged by LLM, five human labels including a lecture-reference check performed by code."
+      ],
+      "reviewed_content_sha256": "9890d761f217eec490cffc61e3a3d76c585cbd57030f4ce6cc0ae7730a8d2306"
+    },
+    "lec04-exercise-p011": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 11,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 11,
+      "canonical_japanese_slide_xml": "ppt/slides/slide11.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "5405024a5568bae436d4b00f2834ce65080d526debecccb083d14091f66ee82c",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated.",
+        "Japanese 第N回 output-marker examples adapted to the existing Arabic repository's literal Lecture NN marker, preserving the code-checkable lecture-reference requirement.",
+        "Retained source distinction: four criteria judged by LLM, five human labels including a lecture-reference check performed by code."
+      ],
+      "reviewed_content_sha256": "7748d02d01d2e5687db47076aca026981a534593abd57e0d644857b5d110352d"
+    },
+    "lec04-exercise-p012": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 12,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 12,
+      "canonical_japanese_slide_xml": "ppt/slides/slide12.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "1913b460f5b3b7d5f095cc07a5ee859aeeef5f06374ced64d126714cae78812d",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated.",
+        "Japanese 第N回 output-marker examples adapted to the existing Arabic repository's literal Lecture NN marker, preserving the code-checkable lecture-reference requirement."
+      ],
+      "reviewed_content_sha256": "7a48dbdc5ba34d317907ce8b05bc5cbe0848f4871caa8ba5f71ee3a8466e9a70"
+    },
+    "lec04-exercise-p013": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 13,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 13,
+      "canonical_japanese_slide_xml": "ppt/slides/slide13.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "251986b44c2a1c37ebf647a8a7659c97322a4239e86f7903e4180950d0c06c55",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated.",
+        "Operational git fetch URL adapted from the Japanese course repository to https://github.com/matsuolab/lecture-ai-engineering-2026-ar.git, as authorized for the existing Arabic course workflow. Tag and command flags unchanged."
+      ],
+      "reviewed_content_sha256": "63b724c65a505e2e809ef00d1d12da239be713f49676f8ec6159fd707e42beaf"
+    },
+    "lec04-exercise-p014": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 14,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 14,
+      "canonical_japanese_slide_xml": "ppt/slides/slide14.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "f9704389fff727352fec121ddbdf0811918d913468d3668f84c011531077f6cf",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated.",
+        "Translated all explicit image/logo/UI transcription included in the canonical source page.",
+        "Retained source distinction: four criteria judged by LLM, five human labels including a lecture-reference check performed by code.",
+        "Actionable UI references use existing Arabic labels for the hesitation checkbox and save/next button. The source screenshot's explicit pass(1)/fail(0) labels remain a faithful source-image transcription rather than a claim about the current UI's T/F labels."
+      ],
+      "reviewed_content_sha256": "2ab621eb3f279ab14f4f80579d3bfdb1df5192f1003317ebab7aee781d26c656"
+    },
+    "lec04-exercise-p015": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 15,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 15,
+      "canonical_japanese_slide_xml": "ppt/slides/slide15.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "a1442010d492fcd36ebdacff0ed3808d5f0630782af1919cd46da2835caa049a",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "8bf28b3b3a141c7ae894302e11e31b3fac16f598c416cf6041019e002177d509"
+    },
+    "lec04-exercise-p016": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 16,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 16,
+      "canonical_japanese_slide_xml": "ppt/slides/slide16.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "cdec3c609a5629fe04571109a954f6c885cb4919fafd89065c6086265b7003a3",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated.",
+        "Actionable UI references use existing Arabic labels for the hesitation checkbox and save/next button. The source screenshot's explicit pass(1)/fail(0) labels remain a faithful source-image transcription rather than a claim about the current UI's T/F labels.",
+        "Expanded the source's abbreviated alternative fail-policy ellipsis into a complete single-line Arabic rule, with the same referent and policy meaning, so learners can copy the alternative just as they can copy the pass rule."
+      ],
+      "reviewed_content_sha256": "641d77f59a25f3b3e0eb5b083d6060a9b87e6dcc8e48759b68f3ad2b9c4cfa2f"
+    },
+    "lec04-exercise-p017": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 17,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 17,
+      "canonical_japanese_slide_xml": "ppt/slides/slide17.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "3cb593ee53d7f3d64cc398bb0c9a7f383ac622e296bb5533c98718e99f30ea30",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "fe92edbb5e0f5a7fb501156bd6133487ebe945c24a97b1a08d884cc7c4ea5da3"
+    },
+    "lec04-exercise-p018": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 18,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 18,
+      "canonical_japanese_slide_xml": "ppt/slides/slide18.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "9a3e8b82b8e3ac4f701ad5994448ee39acc1a7af85712b49cc306b0345be6c64",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated.",
+        "Actionable UI references use existing Arabic labels for the hesitation checkbox and save/next button. The source screenshot's explicit pass(1)/fail(0) labels remain a faithful source-image transcription rather than a claim about the current UI's T/F labels."
+      ],
+      "reviewed_content_sha256": "4ee4d11613bdd41e8c6feca5ffc55a0512739df5c882162caaa5c00f6120bbfb"
+    },
+    "lec04-exercise-p019": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 19,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 19,
+      "canonical_japanese_slide_xml": "ppt/slides/slide19.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "36e23ee4a4bde88ed582072a65f1e62d8a69bc52f4c91f80b6ceca5b05939d7e",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "a7ff46f8db4331f896312af917b4a614416b44bed67f44d09d17094a87ac19a2"
+    },
+    "lec04-exercise-p020": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 20,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 20,
+      "canonical_japanese_slide_xml": "ppt/slides/slide20.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "f8d4c97e7232e01ff02c01bef544b707d18103b0078a0d8dd853a97800199458",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "f28b62222193a4b940622528a069a3c4e7cb68a55b46b27836d6cd5796a4155e"
+    },
+    "lec04-exercise-p021": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 21,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 21,
+      "canonical_japanese_slide_xml": "ppt/slides/slide21.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "7d46c471fb01ef7f0b0bb3942d8440467f97d1ab58e30e3a6be3e9869d01b259",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "53d7174f7984d3bb034b266ecdb8f3ee4adb8265784f64e8e1117e88dd35bbac"
+    },
+    "lec04-exercise-p022": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 22,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 22,
+      "canonical_japanese_slide_xml": "ppt/slides/slide22.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "c3f7e7739695c527db69619bad681eab6c5171037ce237d027ae92c472da92fc",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated."
+      ],
+      "reviewed_content_sha256": "80c71ec2e94170b8688978ae6d5a26b16ede1462c9cbcf7e3eac6cc72e2caa03"
+    },
+    "lec04-exercise-p023": {
+      "canonical_document_id": "lec04-exercise",
+      "canonical_japanese_page": 23,
+      "canonical_japanese_slide_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "canonical_japanese_slide_page": 23,
+      "canonical_japanese_slide_xml": "ppt/slides/slide23.xml",
+      "canonical_source_sha": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "canonical_source_content_sha256": "f41a5e3da70cfdc3543bcb4df2ea98fcf99d6214d9dccaf839a4fa943e01e941",
+      "translation_file": null,
+      "translation_slide_page": null,
+      "translation_pdf_page": null,
+      "status": "newly_translated_from_canonical_japanese",
+      "adaptations_and_repairs": [
+        "Full newly translated Japanese teaching text; identifiers, model names, flags, paths, numerical claims and research references preserved. Natural-language examples, comments and quoted UI text translated.",
+        "Translated all explicit image/logo/UI transcription included in the canonical source page."
+      ],
+      "reviewed_content_sha256": "54ad116e9f13ad0e6c44c50130c2185186abe74490d5d66139d244f2474ea15c"
+    }
+  }
+}
