@@ -512,7 +512,7 @@
       "aliases": ["بادئة اسم الأداة", "prefix", "تعارض الأسماء"],
       "lecture": 6,
       "category": "MCP",
-      "definition": "إضافة بادئة مثل «server_name_tool_name» للتمييز بين أدوات تحمل الاسم نفسه عند استخدام عدة خوادم MCP. يضيف app/agent.py في هذه الدورة اسم الخادم تلقائيًا من ملف الإعداد، مثل glossary_search_glossary؛ ويفعل load_mcp_toolsets في Pydantic AI الشيء نفسه. كلما زاد عدد الأدوات، زادت الأوصاف المرسلة إلى النموذج، مما يؤثر في دقة اختيار الأداة وعدد الرموز النصية.",
+      "definition": "إضافة بادئة مثل «server_name_tool_name» للتمييز بين أدوات تحمل الاسم نفسه عند استخدام عدة خوادم MCP. يضيف app/mcp_agent.py في هذه الدورة اسم الخادم تلقائيًا من ملف الإعداد، مثل glossary_search_glossary؛ ويفعل load_mcp_toolsets في Pydantic AI الشيء نفسه. كلما زاد عدد الأدوات، زادت الأوصاف المرسلة إلى النموذج، مما يؤثر في دقة اختيار الأداة وعدد الرموز النصية.",
       "related": ["mcp-config", "tool-description", "rate-limit"]
     },
     {

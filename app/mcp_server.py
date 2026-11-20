@@ -1,15 +1,14 @@
-"""Lecture 06: إتاحة المسرد والنقاط الرئيسة للمحاضرات عبر خادم MCP.
+"""خادم MCP لمسرد الدورة وملخصات المحاضرات في المحاضرة 06.
 
-Usage:
-    uv run python -m app.agent --mcp --list-tools   # اعرض الأدوات التي يتيحها هذا الخادم (دون مفتاح API)
-    uv run python -m app.mcp_server --http          # شغّله باستخدام Streamable HTTP (http://127.0.0.1:8000/mcp)
+    uv run python -m app.mcp_agent --list-tools
+    uv run python -m app.mcp_server --http
 
-دون وسيطات، يستمع الخادم عبر stdio (الإدخال والإخراج القياسيين). هذا الوضع مخصص لعميل MCP
-(مثل app.agent مع --mcp أو Copilot Chat) كي يشغّل الخادم كعملية فرعية. إذا شغّلته يدويًا
-فسيبدو كأنه توقف بينما ينتظر الإدخال.
+يعرض الأمر الأول الأدوات دون مفتاح API. يشغّل الأمر الثاني الخادم على
+Streamable HTTP في http://127.0.0.1:8000/mcp.
 
-في Lecture 03 سجّلنا دوال tools.py مباشرة في agent.py. يتيح خادم MCP لعملاء
-غير Pydantic AI، مثل Copilot Chat، استخدام الدوال نفسها عبر بروتوكول مشترك.
+ينتظر الخادم الإدخال عبر stdio افتراضيًا. يشغّله عميل MCP مثل app.mcp_agent
+كعملية فرعية. إذا شغّلته مباشرةً فسيبقى بانتظار الإدخال. يمكن للوكيل
+ولعملاء MCP الآخرين استخدام دوال المحاضرة 03 عبر البروتوكول نفسه.
 """
 
 import argparse
@@ -27,8 +26,7 @@ server = MCPServer(
 # أتح الدالة نفسها المستخدمة في Lecture 03 كأداة MCP؛ تتحول سلسلة توثيقها وتلميحات أنواعها إلى وصف الأداة
 server.tool()(tools.search_glossary)
 
-# TODO(تمرين Lecture 06): أتح tools.get_lecture_summary أيضًا (بنفس صيغة السطر أعلاه)
-# إذا أنشأت make_quiz في Lecture 03 فيمكنك إتاحتها أيضًا
+# TODO(الواجب الأساسي): أتح get_lecture_summary أيضًا
 
 
 def main() -> None:
