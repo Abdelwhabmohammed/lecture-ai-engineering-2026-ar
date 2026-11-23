@@ -85,39 +85,6 @@ def get_lecture_summary(lecture: int) -> str:
     return path.read_text(encoding="utf-8")
 
 
-<<<<<<< HEAD
-def make_quiz(lecture: int) -> str:
-    """أنشئ سؤال مراجعة من مصطلح في محاضرة محددة، مع إجابته كي يطرح الوكيل السؤال على المتعلم.
-
-    استخدمها عندما يطلب المتعلم سؤال مراجعة أو اختبارًا قصيرًا من محاضرة بعينها.
-    """
-    entries = [term for term in load_glossary() if term["lecture"] == lecture]
-    if not entries:
-        return f"لا توجد مصطلحات متاحة لإنشاء سؤال مراجعة من Lecture {lecture:02d}."
-
-    term = random.choice(entries)
-    return json.dumps(
-        {"question": f"ما معنى {term['term']}؟", "answer": term["definition"]},
-        ensure_ascii=False,
-    )
-
-
-def save_learning_log(topic: str, learning: str) -> str:
-    """احفظ موضوعًا وما تعلّمه الطالب عنه في learning_log/.
-
-    استخدمها فقط عندما يطلب المتعلم صراحةً حفظ سجل تعلمه؛ يتطلب الحفظ موافقته.
-    """
-    saved_at = datetime.now(timezone.utc)
-    LOG_DIR.mkdir(parents=True, exist_ok=True)
-    path = LOG_DIR / f"{saved_at.strftime('%Y%m%dT%H%M%S%fZ')}-{uuid4().hex}.json"
-    record = {
-        "saved_at": saved_at.isoformat(),
-        "topic": topic,
-        "learning": learning,
-    }
-    path.write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    return f"حُفظ سجل التعلم في {path.relative_to(LOG_DIR.parent)}."
-=======
 def search_materials(query: str) -> str:
     """ابحث في مواد المحاضرات الرئيسة من Lecture 01 إلى Lecture 03، وأعِد نصوص الصفحات ذات الصلة وعناوينها وأرقام صفحاتها.
 
@@ -163,4 +130,3 @@ def search_graph(query: str) -> str:
         return json.dumps({"error": str(e)}, ensure_ascii=False)
     except APIError as e:
         return json.dumps({"error": api_error_message(e.code)}, ensure_ascii=False)
->>>>>>> 2117dbb (Translate Lecture 05 RAG exercises and runtime (ar; data pending))
