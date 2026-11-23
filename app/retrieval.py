@@ -5,6 +5,7 @@ import json
 import math
 import re
 import sqlite3
+import struct
 from contextlib import contextmanager
 from collections import defaultdict, deque
 from pathlib import Path
@@ -118,9 +119,6 @@ def open_index(path: Path):
     db = sqlite3.connect(path.resolve().as_uri() + "?mode=ro", uri=True)
     try:
         db.row_factory = sqlite3.Row
-        db.enable_load_extension(True)
-        sqlite_vec.load(db)
-        db.enable_load_extension(False)
         yield db
     finally:
         db.close()
@@ -130,17 +128,77 @@ def search(query: str) -> list[dict]:
     """أنشئ تضمينًا للسؤال، وأعِد أقرب الصفحات بحد أقصى RAG_TOP_K."""
     if not isinstance(query, str) or not query.strip():
         raise ValueError("استعلام البحث فارغ.")
+    vector = embed_text(query.strip(), "RETRIEVAL_QUERY")
     with open_index(RAG_DB) as db:
-        vector = embed_text(query.strip(), "RETRIEVAL_QUERY")
         columns = {column["name"] for column in db.execute("PRAGMA table_info(chunks)")}
-        citation = "citation," if "citation" in columns else ""
-        rows = db.execute(f"""
+        if hasattr(db, "load_extension"):
+            try:
+                db.enable_load_extension(True)
+                sqlite_vec.load(db)
+                db.enable_load_extension(False)
+                citation = "citation," if "citation" in columns else ""
+                rows = db.execute(f"""
+                    SELECT page_id, document_id, lecture, document_title, section, title, page, content,
+                           {citation}
+                           vec_distance_cosine(embedding, ?) AS distance
+                    FROM chunks ORDER BY distance, page_id LIMIT ?
+                """, (sqlite_vec.serialize_float32(vector), RAG_TOP_K))
+                return [dict(row) for row in rows]
+            except sqlite3.Error:
+                pass
+
+        rows = []
+        for row in db.execute("""
             SELECT page_id, document_id, lecture, document_title, section, title, page, content,
-                   {citation}
-                   vec_distance_cosine(embedding, ?) AS distance
-            FROM chunks ORDER BY distance, page_id LIMIT ?
-        """, (sqlite_vec.serialize_float32(vector), RAG_TOP_K))
-        return [dict(row) for row in rows]
+                   embedding, citation
+            FROM chunks
+        """):
+            blob = row["embedding"]
+            if len(blob) != EMBEDDING_DIMENSIONS * 4:
+                continue
+            stored = struct.unpack("<768f", blob)
+            dot = sum(a * b for a, b in zip(vector, stored))
+            stored_norm = math.sqrt(sum(value * value for value in stored))
+            query_norm = math.sqrt(sum(value * value for value in vector))
+            similarity = dot / (stored_norm * query_norm) if stored_norm and query_norm else 0.0
+            item = {key: row[key] for key in row.keys() if key != "embedding"}
+            item["distance"] = 1.0 - similarity
+            rows.append(item)
+        rows.sort(key=lambda item: (item["distance"], item["page_id"]))
+        return rows[:RAG_TOP_K]
+
+
+def search_with_neighbors(query: str) -> list[dict]:
+    """أضف الصفحة السابقة واللاحقة لكل نتيجة، دون تكرار الصفحات ومن دون الانتقال إلى وثيقة أخرى."""
+    hits = search(query)
+    pages = load_pages(RAG_SOURCE)
+    by_document = defaultdict(list)
+    for page in pages:
+        by_document[page["document_id"]].append(page)
+
+    for document_pages in by_document.values():
+        document_pages.sort(key=lambda page: page["page"])
+
+    selected = {}
+    for hit in hits:
+        document_id = hit["document_id"]
+        document_pages = by_document[document_id]
+        positions = {page["page_id"]: index for index, page in enumerate(document_pages)}
+        index = positions.get(hit["page_id"])
+        if index is None:
+            continue
+        for neighbor_index in range(max(0, index - 1), min(len(document_pages), index + 2)):
+            neighbor = document_pages[neighbor_index]
+            item = dict(neighbor)
+            item["neighbor_of"] = hit["page_id"]
+            item["is_search_hit"] = neighbor["page_id"] == hit["page_id"]
+            if neighbor["page_id"] not in selected:
+                selected[neighbor["page_id"]] = item
+
+    for hit in hits:
+        if hit["page_id"] not in selected:
+            selected[hit["page_id"]] = {**hit, "neighbor_of": None, "is_search_hit": True}
+    return list(selected.values())
 
 
 def search_graph(query: str) -> dict:
@@ -206,8 +264,10 @@ def run_full_context(agent, question: str, model, instructions: str, prompt_temp
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="نفّذ البحث في مواد المحاضرات فقط، دون استخدام الوكيل")
     parser.add_argument("query", help="المحتوى الذي تريد البحث عنه")
+    parser.add_argument("--neighbors", action="store_true", help="أضف الصفحة السابقة واللاحقة لكل نتيجة ضمن الوثيقة نفسها")
     args = parser.parse_args()
-    for i, result in enumerate(search(args.query), 1):
+    results = search_with_neighbors(args.query) if args.neighbors else search(args.query)
+    for i, result in enumerate(results, 1):
         print(f"\n{'=' * 60}\nنتيجة البحث {i}\n{'=' * 60}")
         print(f"المحاضرة: {result['document_title']}")
         print(f"الفصل: {result['section']}")
